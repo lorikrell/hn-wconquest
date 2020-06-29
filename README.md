@@ -12,14 +12,6 @@ It adds Warcraft Conquest campaign maps for locations, NPCs, and scheduled event
 
 * [HandyNotes](https://www.curseforge.com/wow/addons/handynotes)
 
-## Changelog
-
-| Release | Campaign  |  Information |
-| -- | -- | -- |
-| 1.0.0 - 06-28-2020 | Initial Northrend Pre-Shadowlands | Prepatch Shadowlands Scourge Campaign for Alliance, Horde, and Neutral RPers |
-| | | Current locations include potential camps, existing locations, and villains |
-| | | Includes initial dev guide |
-
 ## Credits and Thanks
 
 WConquest addon is based on the fantastic addon [HandyNotes: Boralus RP Spots](https://www.curseforge.com/wow/addons/handynotes-boralus-rp-spots) by [OrabiMoonGuard](https://www.curseforge.com/members/oraibimoonguard)!  Thank you for the great work for the RP community and your addon.
