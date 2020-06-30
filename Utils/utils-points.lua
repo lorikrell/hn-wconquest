@@ -101,7 +101,7 @@ local function work_out_label(point)
 
     -- change the colors for ships and closed stuff and empty stuff and official stuff
     if        point.official                                  then r, g, b = 0, 0.75, 1;
-       elseif point.event or point.battle or point.naval      then r, g, b = 0, 0.75, 1;
+       elseif point.event or point.battle or point.naval or point.tank      then r, g, b = 0, 0.75, 1;
        elseif point.spoiler                                   then r, g, b = 1, 0.5, 0;  label = "Spoilers: " .. label
        elseif point.empty and point.closed and not point.ship then r, g, b = 0.75, 0.75, 0.75; label = label .. " [empty, closed]"
        elseif point.empty                                     then r, g, b = 1, 1, 1;          label = label .. " [empty]"
@@ -172,7 +172,11 @@ local function work_out_texture(point)
     elseif point.battle       and (ns.db.show_event  or custom)         then texture = t.battle
     elseif point.naval        and (ns.db.show_event  or custom)         then texture = t.naval
     elseif point.docks        and (ns.db.show_vehicles  or custom)      then texture = t.docks
-   
+    -- Adding custom images
+    elseif point.tank        and (ns.db.show_vehicles  or custom)      then texture = tank
+
+
+
    -- Hiding these textures for now
     -- elseif point.basement     and (ns.db.show_misc  or custom)          then texture = t.basement
     -- elseif point.beds         and (ns.db.show_misc  or custom)          then texture = t.bed
@@ -489,14 +493,15 @@ local function should_show_point(coord, point, currentZone, isMinimap)
     if ns.db.show_villain  and point.boss              then show = true; end;
     if ns.db.show_neutral  and point.neutral           then show = true; end;
     if ns.db.show_camp     and point.camp              then show = true; end;
-    if ns.db.show_vehicles  and point.docks             then show = true; end;
-    if ns.db.show_vehicles  and point.allianceair       then show = true; end;
-    if ns.db.show_vehicles  and point.hordeair          then show = true; end;
-    if ns.db.show_vehicles  and point.docks             then show = true; end;
+    if ns.db.show_vehicles and point.docks             then show = true; end;
+    if ns.db.show_vehicles and point.allianceair       then show = true; end;
+    if ns.db.show_vehicles and point.hordeair          then show = true; end;
+    if ns.db.show_vehicles and point.docks             then show = true; end;
     if ns.db.show_supplies and point.supplies          then show = true; end;
     if ns.db.show_event    and point.event             then show = true; end;
     if ns.db.show_event    and point.battle            then show = true; end;
     if ns.db.show_event    and point.naval             then show = true; end;
+    if ns.db.show_vehicles and point.tank              then show = true; end;
     if ns.db.show_spoilers and point.spoiler == "list" then show = true; end;
     if ns.db.show_misc     and not point.ship
                            and not point.alliance 
@@ -524,6 +529,7 @@ local function should_show_point(coord, point, currentZone, isMinimap)
                            and not point.event
                            and not point.battle
                            and not point.naval
+                           and not point.tank
                            and not point.spoiler       then show = true; end;
 
     -- try to find a reason to not show it

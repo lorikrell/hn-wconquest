@@ -51,6 +51,22 @@ t.event         = atlas("QuestPortraitIcon-SandboxQuest",                 2.00);
 t.battle        = atlas("ShipMissionIcon-Combat-MapBadge",                2.00);
 t.naval         = atlas("ShipMissionIcon-Training-MapBadge",              2.00);
 
+t.arrow         = 
+  { up          = "poi-door-up",
+    down        = "poi-door-down",
+    left        = "poi-door-left",
+    right       = "poi-door-right",
+    scale       = 1.30, };
+
+-- --------------------------------------------------------------------------------------------------------
+-- Add custom images
+-- Saves .tga targa files to ART folder.
+-- Add line like below. DO NOT ADD t. to the icon name!
+-- --------------------------------------------------------------------------------------------------------
+
+tank = { icon = "Interface\\AddOns\\HandyNotes_WarcraftConquest\\Art\\alliance-tank.tga", scale = 3.50,};
+
+
 
 -- Currently ICONs not used:
 -- Innkeeper
@@ -65,11 +81,3 @@ t.naval         = atlas("ShipMissionIcon-Training-MapBadge",              2.00);
 --     left        = "NPE_ArrowLeftGlow",
 --     right       = "NPE_ArrowRightGlow",
 --     scale       = 1.30, };
--- 
-t.arrow         = 
-  { up          = "poi-door-up",
-    down        = "poi-door-down",
-    left        = "poi-door-left",
-    right       = "poi-door-right",
-    scale       = 1.30, };
-

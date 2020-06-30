@@ -50,7 +50,8 @@
             ship = [enum],    -- ICON the size of the ship, LARGE, MEDIUM, SMALL, WRECK, BOAT, SAILBOAT, or LANDING
             allianceair = [boolean]  -- ICON airship
             hordeair = [boolean]  -- ICON airship
-            docks = [boolean], -- docks
+            docks = [boolean], -- ICON docks
+            tank = [boolean], -- ICON tank
 
          -- modifiers
             empty = [boolean], -- if empty (no npcs at all)
@@ -94,7 +95,9 @@ ns.points[C.ZONES.DRAGONBLIGHT] = { -- Dragonblight
    [48787824] = { label = "Risen Kraken of Moa'ki",             naval = true, npc = "Vehicle Battle Team", text = "(Example) Coalition forces seek landfall in the bay, facing off with risen dead and krakens.", eventtype = "Vehicle battle, Discord", attendee = 15, schedule = "Monday, Sept 7th, 8pm", nevent= true,},
    [85664735] = { label = "Culling of Carrion",                 battle = true, npc = "Sellony", text = "(Example) Within the hollows of Carrion Fields, a fetid lord and its spies watch too closely. End their forces and learn what you can of their plans.", eventtype = "Battle, scouting", attendee = 10, schedule = "Tuesday, Sept 8th, 8pm", aevent = true, },
    [55853751] = { label = "Frost Wyrm Flights",                 battle = true, npc = "Sonceri", text = "(Example) For the coming battles, we need stronger forces. Rally and collect the bones of dragons, and protect the necromancers to raise a legion of flights!", eventtype = "Battle, supplies, escort", attendee = 20, schedule = "Wednesday, Sept 9th, 8pm", hevent = true, },
--- -------------------------------------------------------------------------------------------------------------------
+   [68484662] = { label = "Frigid Fields of Woe",               tank = true, npc = "Vehicle Battle Team", text = "(Example) A terror rumbles through the plains with hulking abominations...the skies darkening with deathly wyrms...TO THE TANKS!", eventtype = "Vehicle battle, Discord", attendee = 15, schedule = "Thursday, Sept 10th, 8pm", nevent= true,},
+
+   -- -------------------------------------------------------------------------------------------------------------------
 -- Neutral Locations
 -- -------------------------------------------------------------------------------------------------------------------
    [83392647] = { label = "Light's Trust",                      neutral = true, text = "The Argent Crusade stands in this small camp", npc = "Crusader Valus", },
