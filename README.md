@@ -6,7 +6,7 @@ It adds Warcraft Conquest campaign maps for locations, NPCs, and scheduled event
 
 * Warcraft Conquest: https://gamerchic.org/warcraft-conquest/warcraft-conquest.html
 * Addon Website: https://gamerchic.org/warcraft-conquest/addons.html
-* Curseforge: 
+* Curseforge: https://www.curseforge.com/wow/addons/handynotes-warcraft-conquest 
 
 ## Requirements
 
