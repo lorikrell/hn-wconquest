@@ -92,7 +92,7 @@ ns.points[C.ZONES.DRAGONBLIGHT] = { -- Dragonblight
 -- -------------------------------------------------------------------------------------------------------------------
 -- Events
 -- -------------------------------------------------------------------------------------------------------------------
-   [48787824] = { label = "Risen Kraken of Moa'ki",             naval = true, npc = "Vehicle Battle Team", text = "(Example) Coalition forces seek landfall in the bay, facing off with risen dead and krakens.", eventtype = "Vehicle battle, Discord", attendee = 15, schedule = "Monday, Sept 7th, 8pm", nevent= true,},
+   [48787250] = { label = "Risen Kraken of Moa'ki",             naval = true, npc = "Vehicle Battle Team", text = "(Example) Coalition forces seek landfall in the bay, facing off with risen dead and krakens.", eventtype = "Vehicle battle, Discord", attendee = 15, schedule = "Monday, Sept 7th, 8pm", nevent= true,},
    [85664735] = { label = "Culling of Carrion",                 battle = true, npc = "Sellony", text = "(Example) Within the hollows of Carrion Fields, a fetid lord and its spies watch too closely. End their forces and learn what you can of their plans.", eventtype = "Battle, scouting", attendee = 10, schedule = "Tuesday, Sept 8th, 8pm", aevent = true, },
    [55853751] = { label = "Frost Wyrm Flights",                 battle = true, npc = "Sonceri", text = "(Example) For the coming battles, we need stronger forces. Rally and collect the bones of dragons, and protect the necromancers to raise a legion of flights!", eventtype = "Battle, supplies, escort", attendee = 20, schedule = "Wednesday, Sept 9th, 8pm", hevent = true, },
    [68484662] = { label = "Frigid Fields of Woe",               tank = true, npc = "Vehicle Battle Team", text = "(Example) A terror rumbles through the plains with hulking abominations...the skies darkening with deathly wyrms...TO THE TANKS!", eventtype = "Vehicle battle, Discord", attendee = 15, schedule = "Thursday, Sept 10th, 8pm", nevent= true,},
@@ -237,13 +237,9 @@ ns.points[C.ZONES.BOREANTUNDRA] = { -- Borean Tundra
    [88832838] = { label = "Spire of Pain",                       skull = true, text = "Terrifying temple and altar of pain, ravaged by the bent and broken.", npc = "High Priest Talet-Kha",  },
 
    [86932998] = { label = "Ziggeraut of En'kilah",               ziggeraut = true, text = "Floating ziggeraut with a summoning portal on top, no access within.", },
-   [86932999] = { label = "Ziggeraut of En'kilah",               ziggeraut = true, text = "Floating ziggeraut with a summoning portal on top, no access within.", atlas = "Relic-Arcane-TraitGlow",  scale = 2.25, },
-
    [69331500] = { label = "Talramas",                            ziggeraut = true, text = "Crashed ziggeraut teeming with the unhollowed, piecing together brethren from the fallen.", npc = "Lich Lord Chillwinter", floors = 3, },
-   [69331502] = { label = "Talramas",                            ziggeraut = true, text = "Crashed ziggeraut teeming with the unhollowed, piecing together brethren from the fallen.", npc = "Lich Lord Chillwinter", floors = 3, atlas = "Relic-Arcane-TraitGlow",  scale = 2.25, },
-
    [84684086] = { label = "The Wailing Ziggeraut",               ziggeraut = true, text = "Terrifying ziggeraut of cultists and death.", },
-   [84684088] = { label = "The Wailing Ziggeraut",               ziggeraut = true, text = "Terrifying ziggeraut of cultists and death.", atlas = "Relic-Arcane-TraitGlow", scale = 2.25, },
+
 }; -- Borean Tundra
 
 -- -------------------------------------------------------------------------------------------------------------------

@@ -101,7 +101,7 @@ local function work_out_label(point)
 
     -- change the colors for ships and closed stuff and empty stuff and official stuff
     if        point.official                                  then r, g, b = 0, 0.75, 1;
-       elseif point.event or point.battle or point.naval or point.tank      then r, g, b = 0, 0.75, 1;
+       elseif point.event or point.battle or point.naval or point.tank or point.horror or point.magic or point.medic or point.report or point.stealth     then r, g, b = 0, 0.75, 1;
        elseif point.spoiler                                   then r, g, b = 1, 0.5, 0;  label = "Spoilers: " .. label
        elseif point.empty and point.closed and not point.ship then r, g, b = 0.75, 0.75, 0.75; label = label .. " [empty, closed]"
        elseif point.empty                                     then r, g, b = 1, 1, 1;          label = label .. " [empty]"
@@ -163,18 +163,22 @@ local function work_out_texture(point)
     elseif point.skull        and (ns.db.show_villain or custom)        then texture = t.skull
     elseif point.neutral      and (ns.db.show_neutral or custom)        then texture = t.neutral
     elseif point.camp         and (ns.db.show_camp or custom)           then texture = t.camp
-    elseif point.ziggeraut    and (ns.db.show_villain or custom)        then texture = t.ziggeraut
     elseif point.boss         and (ns.db.show_villain or custom)        then texture = t.boss
     elseif point.supplies     and (ns.db.show_supplies or custom)       then texture = t.supplies
     elseif point.alcohol      and (ns.db.show_misc  or custom)          then texture = t.alcohol
     elseif point.cuisine      and (ns.db.show_misc  or custom)          then texture = t.food
     elseif point.event        and (ns.db.show_event  or custom)         then texture = t.event
-    elseif point.battle       and (ns.db.show_event  or custom)         then texture = t.battle
-    elseif point.naval        and (ns.db.show_event  or custom)         then texture = t.naval
     elseif point.docks        and (ns.db.show_vehicles  or custom)      then texture = t.docks
     -- Adding custom images
     elseif point.tank        and (ns.db.show_vehicles  or custom)      then texture = tank
-
+    elseif point.battle      and (ns.db.show_event  or custom)         then texture = battle
+    elseif point.naval       and (ns.db.show_vehicles  or custom)      then texture = naval
+    elseif point.horror      and (ns.db.show_event  or custom)         then texture = horror
+    elseif point.magic       and (ns.db.show_event  or custom)         then texture = magic
+    elseif point.medic       and (ns.db.show_event  or custom)         then texture = medic
+    elseif point.report      and (ns.db.show_event  or custom)         then texture = report
+    elseif point.stealth     and (ns.db.show_event  or custom)         then texture = stealth
+    elseif point.ziggeraut    and (ns.db.show_villain or custom)        then texture = ziggeraut
 
 
    -- Hiding these textures for now
@@ -500,8 +504,13 @@ local function should_show_point(coord, point, currentZone, isMinimap)
     if ns.db.show_supplies and point.supplies          then show = true; end;
     if ns.db.show_event    and point.event             then show = true; end;
     if ns.db.show_event    and point.battle            then show = true; end;
-    if ns.db.show_event    and point.naval             then show = true; end;
+    if ns.db.show_vehicles and point.naval             then show = true; end;
     if ns.db.show_vehicles and point.tank              then show = true; end;
+    if ns.db.show_event    and point.horror            then show = true; end;
+    if ns.db.show_event    and point.magic             then show = true; end;
+    if ns.db.show_event    and point.medic             then show = true; end;
+    if ns.db.show_event    and point.report            then show = true; end;
+    if ns.db.show_event    and point.stealth           then show = true; end;
     if ns.db.show_spoilers and point.spoiler == "list" then show = true; end;
     if ns.db.show_misc     and not point.ship
                            and not point.alliance 
@@ -530,6 +539,11 @@ local function should_show_point(coord, point, currentZone, isMinimap)
                            and not point.battle
                            and not point.naval
                            and not point.tank
+                           and not point.horror
+                           and not point.magic
+                           and not point.medic
+                           and not point.report
+                           and not point.stealth
                            and not point.spoiler       then show = true; end;
 
     -- try to find a reason to not show it

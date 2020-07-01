@@ -37,19 +37,17 @@ t.camp          = atlas("GarrBuilding_Inn_1_A_Info",                      3.00);
 t.skull         = atlas("nazjatar-nagaevent",                             2.50);
 t.neutral       = atlas("ShipMissionIcon-Bonus-Map",                      3.00);
 t.nstronghold   = atlas("GarrBuilding_Armory_1_A_Info",                   3.50);
-t.ziggeraut     = atlas("map-icon-deathknightclasshall",                  3.50);
+--t.ziggeraut     = atlas("map-icon-deathknightclasshall",                  3.50);
 t.boss          = atlas("BossBanner-SkullCircle",                         2.00);
 t.supplies      = atlas("GarrMission_CurrencyIcon-Material",              1.50);
 t.medic         = atlas("groupfinder-icon-role-large-heal",               1.30);
 t.leader        = atlas("StoryHeader-CheevoIcon",                         1.30);
 t.docks          = atlas("ShipMissionIcon-Training-Map",                  2.00);
-
 t.alcohol       = atlas("Innkeeper",                                      2.00);
 t.food          = atlas("Food",                                           1.50);
-
 t.event         = atlas("QuestPortraitIcon-SandboxQuest",                 2.00);
-t.battle        = atlas("ShipMissionIcon-Combat-MapBadge",                2.00);
-t.naval         = atlas("ShipMissionIcon-Training-MapBadge",              2.00);
+-- t.battle        = atlas("ShipMissionIcon-Combat-MapBadge",                2.00);
+-- t.naval         = atlas("ShipMissionIcon-Training-MapBadge",              2.00);
 
 t.arrow         = 
   { up          = "poi-door-up",
@@ -64,9 +62,15 @@ t.arrow         =
 -- Add line like below. DO NOT ADD t. to the icon name!
 -- --------------------------------------------------------------------------------------------------------
 
-tank = { icon = "Interface\\AddOns\\HandyNotes_WarcraftConquest\\Art\\alliance-tank.tga", scale = 3.50,};
-
-
+tank = { icon = "Interface\\AddOns\\HandyNotes_WarcraftConquest\\Art\\vehicle.tga", scale = 3.50,};
+naval = { icon = "Interface\\AddOns\\HandyNotes_WarcraftConquest\\Art\\naval.tga", scale = 3.50,};
+battle = { icon = "Interface\\AddOns\\HandyNotes_WarcraftConquest\\Art\\battle.tga", scale = 3.50,};
+report = { icon = "Interface\\AddOns\\HandyNotes_WarcraftConquest\\Art\\report.tga", scale = 3.50,};
+horror = { icon = "Interface\\AddOns\\HandyNotes_WarcraftConquest\\Art\\horror.tga", scale = 3.50,};
+magic = { icon = "Interface\\AddOns\\HandyNotes_WarcraftConquest\\Art\\magic.tga", scale = 3.50,};
+medic = { icon = "Interface\\AddOns\\HandyNotes_WarcraftConquest\\Art\\medic.tga", scale = 3.50,};
+stealth = { icon = "Interface\\AddOns\\HandyNotes_WarcraftConquest\\Art\\stealth.tga", scale = 3.50,};
+ziggeraut = { icon = "Interface\\AddOns\\HandyNotes_WarcraftConquest\\Art\\v-ziggeraut.tga", scale = 4.25};
 
 -- Currently ICONs not used:
 -- Innkeeper

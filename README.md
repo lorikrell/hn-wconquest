@@ -1,12 +1,13 @@
 # HandyNotes Warcraft Conquest 
 
-HandyNotes - Warcraft Conquest is a plugin adding campaign information for users of the HandyNotes addon! This release is for World of Warcraft Retail 8.3.
+HandyNotes - Warcraft Conquest is a plugin adding campaign information for users of the HandyNotes addon!
 
 It adds Warcraft Conquest campaign maps for locations, NPCs, and scheduled events to maps and minimaps. Anyone attending a campaign can find events on the in-game map, camp locations with key places, events with players and dungeon masters, and changes to the world based on successes and failures.
 
 * Warcraft Conquest: https://gamerchic.org/warcraft-conquest/warcraft-conquest.html
 * Addon Website: https://gamerchic.org/warcraft-conquest/addons.html
-* Curseforge: https://www.curseforge.com/wow/addons/handynotes-warcraft-conquest 
+* Curseforge: https://www.curseforge.com/wow/addons/handynotes-warcraft-conquest
+* GitHub Wiki: https://github.com/lorikrell/hn-wconquest/wiki 
 
 ## Requirements
 
