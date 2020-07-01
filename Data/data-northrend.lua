@@ -35,9 +35,17 @@
 
          -- Events
             npc = "String", -- Dungeon Master name
+            
+            Pick only one of the following:
             event = [boolean], -- ICON event location
             battle = [boolean], -- ICON battle event location
             naval = [boolean], -- ICON water/vehicle fight location
+            horror = [boolean], -- ICON horror event location
+            magic = [boolean], -- ICON magic investigation event location
+            medic = [boolean], -- ICON medical event location
+            report = [boolean], -- ICON escort/report event location
+            stealth = [boolean], -- ICON stealth/scout event location
+
             eventtype = "String", -- type of event: battle, scouting, medic, horror, etc
             attendee = [int], -- max number of attendees
             schedule = "String", -- date, time
