@@ -101,7 +101,7 @@ local function work_out_label(point)
 
     -- change the colors for ships and closed stuff and empty stuff and official stuff
     if        point.official                                  then r, g, b = 0, 0.75, 1;
-       elseif point.event or point.battle or point.naval or point.tank or point.horror or point.magic or point.medic or point.report or point.stealth     then r, g, b = 0, 0.75, 1;
+       elseif point.event or point.battle or point.naval or point.tank or point.horror or point.magic or point.medical or point.report or point.stealth     then r, g, b = 0, 0.75, 1;
        elseif point.spoiler                                   then r, g, b = 1, 0.5, 0;  label = "Spoilers: " .. label
        elseif point.empty and point.closed and not point.ship then r, g, b = 0.75, 0.75, 0.75; label = label .. " [empty, closed]"
        elseif point.empty                                     then r, g, b = 1, 1, 1;          label = label .. " [empty]"
@@ -159,26 +159,44 @@ local function work_out_texture(point)
     elseif point.horde        and (ns.db.show_horde or custom)          then texture = t.horde
     elseif point.tent         and (ns.db.show_camp or custom)           then texture = t.tent
     elseif point.leader       and (ns.db.show_camp or custom)           then texture = t.leader
-    elseif point.medic        and (ns.db.show_camp or custom)           then texture = t.medic
     elseif point.skull        and (ns.db.show_villain or custom)        then texture = t.skull
     elseif point.neutral      and (ns.db.show_neutral or custom)        then texture = t.neutral
     elseif point.camp         and (ns.db.show_camp or custom)           then texture = t.camp
     elseif point.boss         and (ns.db.show_villain or custom)        then texture = t.boss
-    elseif point.supplies     and (ns.db.show_supplies or custom)       then texture = t.supplies
     elseif point.alcohol      and (ns.db.show_misc  or custom)          then texture = t.alcohol
     elseif point.cuisine      and (ns.db.show_misc  or custom)          then texture = t.food
     elseif point.event        and (ns.db.show_event  or custom)         then texture = t.event
     elseif point.docks        and (ns.db.show_vehicles  or custom)      then texture = t.docks
+
     -- Adding custom images
     elseif point.tank        and (ns.db.show_vehicles  or custom)      then texture = tank
     elseif point.battle      and (ns.db.show_event  or custom)         then texture = battle
     elseif point.naval       and (ns.db.show_vehicles  or custom)      then texture = naval
     elseif point.horror      and (ns.db.show_event  or custom)         then texture = horror
     elseif point.magic       and (ns.db.show_event  or custom)         then texture = magic
-    elseif point.medic       and (ns.db.show_event  or custom)         then texture = medic
+    elseif point.medical     and (ns.db.show_event  or custom)       then texture = medic
     elseif point.report      and (ns.db.show_event  or custom)         then texture = report
     elseif point.stealth     and (ns.db.show_event  or custom)         then texture = stealth
-    elseif point.ziggeraut    and (ns.db.show_villain or custom)        then texture = ziggeraut
+
+    elseif point.repairs     and (ns.db.show_camp or custom)           then texture = repairs
+    elseif point.mining      and (ns.db.show_camp or custom)           then texture = mining
+    elseif point.medic       and (ns.db.show_camp or custom)           then texture = medic
+    elseif point.supplies    and (ns.db.show_camp or custom)           then texture = supplies
+    elseif point.inn         and (ns.db.show_camp or custom)           then texture = inn
+    elseif point.alchemy     and (ns.db.show_camp or custom)           then texture = alchemy
+    elseif point.engineering and (ns.db.show_camp or custom)           then texture = engineering
+
+    elseif point.ziggeraut   and (ns.db.show_villain or custom)        then texture = ziggeraut
+    elseif point.skullblood  and (ns.db.show_villain or custom)        then texture = skullblood
+    elseif point.skullfrost  and (ns.db.show_villain or custom)        then texture = skullfrost
+    elseif point.skullshadow and (ns.db.show_villain or custom)        then texture = skullshadow
+    elseif point.skullvoid   and (ns.db.show_villain or custom)        then texture = skullvoid
+    elseif point.skullfel    and (ns.db.show_villain or custom)        then texture = skullfel
+    elseif point.abomination and (ns.db.show_villain or custom)        then texture = abomination
+    elseif point.necromancer and (ns.db.show_villain or custom)        then texture = necromancer
+    elseif point.skeleton    and (ns.db.show_villain or custom)        then texture = skeleton
+    elseif point.knight      and (ns.db.show_villain or custom)        then texture = knight
+    elseif point.vault       and (ns.db.show_camp or custom)           then texture = vault
 
 
    -- Hiding these textures for now
@@ -478,72 +496,103 @@ local function should_show_point(coord, point, currentZone, isMinimap)
     local show = false;
 
     -- SHOWING ICONS - try to find a reason to show it: add if the show_GROUP and the point is one of the members, then show it true. For MISC, it loads everything that is NOT one of the points
-    if ns.db.show_vehicles and point.ship              then show = true; end;
-    if ns.db.show_alliance and point.alliance          then show = true; end;
-    if ns.db.show_alliance and point.astronghold       then show = true; end;
-    if ns.db.show_horde    and point.hstronghold       then show = true; end;
-    if ns.db.show_neutral  and point.nstronghold       then show = true; end;
-    if ns.db.show_alliance and point.ainn              then show = true; end;
-    if ns.db.show_horde    and point.hinn              then show = true; end;
-    if ns.db.show_horde    and point.hmagic            then show = true; end;
-    if ns.db.show_alliance and point.roundtent         then show = true; end;
-    if ns.db.show_alliance and point.tower             then show = true; end;
-    if ns.db.show_horde    and point.horde             then show = true; end;
-    if ns.db.show_camp     and point.tent              then show = true; end;
-    if ns.db.show_camp     and point.leader            then show = true; end;
-    if ns.db.show_camp     and point.medic             then show = true; end;
-    if ns.db.show_villain  and point.skull             then show = true; end;
-    if ns.db.show_villain  and point.ziggeraut         then show = true; end;
-    if ns.db.show_villain  and point.boss              then show = true; end;
-    if ns.db.show_neutral  and point.neutral           then show = true; end;
-    if ns.db.show_camp     and point.camp              then show = true; end;
-    if ns.db.show_vehicles and point.docks             then show = true; end;
-    if ns.db.show_vehicles and point.allianceair       then show = true; end;
-    if ns.db.show_vehicles and point.hordeair          then show = true; end;
-    if ns.db.show_vehicles and point.docks             then show = true; end;
-    if ns.db.show_supplies and point.supplies          then show = true; end;
-    if ns.db.show_event    and point.event             then show = true; end;
-    if ns.db.show_event    and point.battle            then show = true; end;
-    if ns.db.show_vehicles and point.naval             then show = true; end;
-    if ns.db.show_vehicles and point.tank              then show = true; end;
-    if ns.db.show_event    and point.horror            then show = true; end;
-    if ns.db.show_event    and point.magic             then show = true; end;
-    if ns.db.show_event    and point.medic             then show = true; end;
-    if ns.db.show_event    and point.report            then show = true; end;
-    if ns.db.show_event    and point.stealth           then show = true; end;
-    if ns.db.show_spoilers and point.spoiler == "list" then show = true; end;
-    if ns.db.show_misc     and not point.ship
-                           and not point.alliance 
-                           and not point.astronghold 
-                           and not point.hstronghold
-                           and not point.nstronghold
-                           and not point.ainn
-                           and not point.hinn
-                           and not point.hmagic
-                           and not point.roundtent
-                           and not point.allianceair
-                           and not point.hordeair
-                           and not point.tower
-                           and not point.horde
-                           and not point.docks
-                           and not point.tent
-                           and not point.leader
-                           and not point.medic
-                           and not point.skull
-                           and not point.ziggeraut
-                           and not point.boss
-                           and not point.neutral
-                           and not point.camp
-                           and not point.supplies
-                           and not point.event
-                           and not point.battle
-                           and not point.naval
-                           and not point.tank
-                           and not point.horror
-                           and not point.magic
-                           and not point.medic
-                           and not point.report
-                           and not point.stealth
+      if ns.db.show_vehicles and point.ship              then show = true; end;
+      if ns.db.show_alliance and point.alliance          then show = true; end;
+      if ns.db.show_alliance and point.astronghold       then show = true; end;
+      if ns.db.show_horde    and point.hstronghold       then show = true; end;
+      if ns.db.show_neutral  and point.nstronghold       then show = true; end;
+      if ns.db.show_alliance and point.ainn              then show = true; end;
+      if ns.db.show_horde    and point.hinn              then show = true; end;
+      if ns.db.show_horde    and point.hmagic            then show = true; end;
+      if ns.db.show_alliance and point.roundtent         then show = true; end;
+      if ns.db.show_alliance and point.tower             then show = true; end;
+      if ns.db.show_horde    and point.horde             then show = true; end;
+      if ns.db.show_camp     and point.tent              then show = true; end;
+      if ns.db.show_camp     and point.leader            then show = true; end;
+      if ns.db.show_camp     and point.medic             then show = true; end;
+      if ns.db.show_camp     and point.repairs           then show = true; end;
+      if ns.db.show_camp     and point.supplies          then show = true; end;
+      if ns.db.show_camp     and point.inn               then show = true; end;
+      if ns.db.show_camp     and point.alchemy           then show = true; end;
+      if ns.db.show_camp     and point.engineering       then show = true; end;
+      if ns.db.show_camp     and point.vault             then show = true; end;
+      if ns.db.show_villain  and point.skull             then show = true; end;
+      if ns.db.show_villain  and point.ziggeraut         then show = true; end;
+      if ns.db.show_villain  and point.boss              then show = true; end;
+      if ns.db.show_neutral  and point.neutral           then show = true; end;
+      if ns.db.show_villain  and point.skullshadow       then show = true; end;
+      if ns.db.show_villain  and point.skullfel          then show = true; end;
+      if ns.db.show_villain  and point.skullvoid         then show = true; end;
+      if ns.db.show_villain  and point.skullblood        then show = true; end;
+      if ns.db.show_villain  and point.skullfrost        then show = true; end;
+      if ns.db.show_villain  and point.abomination       then show = true; end;
+      if ns.db.show_villain  and point.lich              then show = true; end;
+      if ns.db.show_villain  and point.necromancer       then show = true; end;
+      if ns.db.show_villain  and point.skeleton          then show = true; end;
+      if ns.db.show_villain  and point.knight            then show = true; end;
+      if ns.db.show_camp     and point.camp              then show = true; end;
+      if ns.db.show_vehicles and point.docks             then show = true; end;
+      if ns.db.show_vehicles and point.allianceair       then show = true; end;
+      if ns.db.show_vehicles and point.hordeair          then show = true; end;
+      if ns.db.show_vehicles and point.docks             then show = true; end;
+      if ns.db.show_vehicles and point.naval             then show = true; end;
+      if ns.db.show_vehicles and point.tank              then show = true; end;
+      if ns.db.show_event    and point.event             then show = true; end;
+      if ns.db.show_event    and point.battle            then show = true; end;
+      if ns.db.show_event    and point.horror            then show = true; end;
+      if ns.db.show_event    and point.magic             then show = true; end;
+      if ns.db.show_event    and point.medical           then show = true; end;
+      if ns.db.show_event    and point.report            then show = true; end;
+      if ns.db.show_event    and point.stealth           then show = true; end;
+      if ns.db.show_spoilers and point.spoiler == "list" then show = true; end;
+      if ns.db.show_misc     and not point.ship
+                             and not point.alliance
+                             and not point.engineering
+                             and not point.vault
+                             and not point.skullshadow
+                             and not point.skullfel
+                             and not point.skullvoid
+                             and not point.skullblood
+                             and not point.skullfrost
+                             and not point.abomination
+                             and not point.skeleton
+                             and not point.knight
+                             and not point.necromancer
+                             and not point.astronghold 
+                             and not point.hstronghold
+                             and not point.nstronghold
+                             and not point.ainn
+                             and not point.hinn
+                             and not point.hmagic
+                             and not point.roundtent
+                             and not point.allianceair
+                             and not point.hordeair
+                             and not point.tower
+                             and not point.horde
+                             and not point.docks
+                             and not point.tent
+                             and not point.leader
+                             and not point.medic
+                             and not point.medical
+                             and not point.inn
+                             and not point.alchemy
+                             and not point.repairs
+                             and not point.mining
+                             and not point.skull
+                             and not point.ziggeraut
+                             and not point.boss
+                             and not point.neutral
+                             and not point.camp
+                             and not point.supplies
+                             and not point.event
+                             and not point.battle
+                             and not point.naval
+                             and not point.tank
+                             and not point.horror
+                             and not point.magic
+                             and not point.medic
+                             and not point.report
+                             and not point.stealth
                            and not point.spoiler       then show = true; end;
 
     -- try to find a reason to not show it
