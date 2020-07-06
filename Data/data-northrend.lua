@@ -138,7 +138,7 @@ ns.points[C.ZONES.DRAGONBLIGHT] = { -- Dragonblight
    [76764763] = { label = "Wintergarde Keep",                    astronghold = true, floors = 3, seats = 7, tables = 2, maxseats = 4, text = "Alliance war headquarters with meeting hall and brig.", npc = "Commander Eligor Dawnbringer", },
    [77415140] = { label = "Wintergarde Inn",                     inn = true, floors = 3, seats = 8, beds = 4, tables = 5, maxseats = 3, text = "Inn with a bar, kitchen, and beds.", phasing = "Complete Naxxramas and the Fall of Wintergarde.", },
    [77905026] = { label = "Siegeworks",                          engineering = true, npc = "Siege Engineer Quarterflash", text = "Repairs for armor, weapons, and more.", },
-   [35644657] = { label = "Medics",                              medic = true, text = "Healing and care, fighting to save lives.", npc = "Zielig the Visionary", },
+   [79064752] = { label = "Medics",                              medic = true, text = "Healing and care, fighting to save lives.", npc = "Zielig the Visionary", },
    [78974532] = { label = "Circle of Battlemagi",                magic = true, floors = 1, text = "Center of magic", npc = "Vas the Unstable", },
    [89684670] = { label = "Cannons",                             text = "Line of cannons ready to fight", atlas = "Vehicle-Ground-Occupied", scale = 1.50,},
    [39032704] = { label = "Fordragon Hold",                      astronghold = true, text = "Battlecamp of the Alliance with towers and camp", },
