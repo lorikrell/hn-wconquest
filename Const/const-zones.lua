@@ -7,7 +7,8 @@ if not ns.CONST       then ns.CONST       = {}; end;
 -- See https://wow.gamepedia.com/UiMapID to get map zones and ids
 
 C.ZONES          =
-  { DALARAN      = 125,
+  { NORTHREND    = 113,
+    DALARAN      = 125,
     DRAGONBLIGHT = 115,
     BOREANTUNDRA = 114,
     ICECROWN     = 118,
@@ -16,10 +17,14 @@ C.ZONES          =
     SHOLAZARBASIN= 119,
     THESTORMPEAKS= 120,
     ZULDRAK      = 121,
+    EASTERNKINGDOMS = 13,
+    KALIMDOR = 12,
+    PANDARIA = 989,
   };
 
 C.ZONENAMES     = 
-  { [125]      = "Dalaran City",
+  { [113]      = "Northrend",
+    [125]      = "Dalaran City",
     [115]      = "Dragonblight",
     [114]      = "Borean Tundra",
     [118]      = "Icecrown",
@@ -28,6 +33,9 @@ C.ZONENAMES     =
     [119]      = "Sholazar Basin",
     [120]      = "The Storm Peaks",
     [121]      = "Zul'Drak",
+    [13]       = "Eastern Kingdoms",
+    [12]       = "Kalimdor",
+    [989]      = "Pandaria",
   };
 
 C.ZONE          = C.ZONES.DALARAN;

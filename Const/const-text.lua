@@ -7,8 +7,9 @@ local fmt       = string.format;
 local meta      = GetAddOnMetadata;
 
 -- Add zone information from const-zones.lua
-C.ZONES         =
-  { DALARAN      = 125,
+C.ZONES        =
+  { NORTHREND  = 113,
+  DALARAN      = 125,
   DRAGONBLIGHT = 115,
   BOREANTUNDRA = 114,
   ICECROWN     = 118,
@@ -17,10 +18,14 @@ C.ZONES         =
   SHOLAZARBASIN= 119,
   THESTORMPEAKS= 120,
   ZULDRAK      = 121,
+  EASTERNKINGDOMS = 13,
+  KALIMDOR     = 12,
+  PANDARIA     = 989,
   };
 
 C.ZONENAMES     = 
-  { [125]    = "Dalaran City",
+  { [113]    = "Northrend",
+  [125]      = "Dalaran City",
   [115]      = "Dragonblight",
   [114]      = "Borean Tundra",
   [118]      = "Icecrown",
@@ -29,6 +34,9 @@ C.ZONENAMES     =
   [119]      = "Sholazar Basin",
   [120]      = "The Storm Peaks",
   [121]      = "Zul'Drak",
+  [13]       = "Eastern Kingdoms",
+  [12]       = "Kalimdor",
+  [989]      = "Pandaria",
   };
 
 C.ZONE          = C.ZONES.DALARAN;
@@ -42,7 +50,7 @@ C.WCONQUEST     = fmt("[%s%s|r]", C.COLOR.APP, C.APPNAME);
 C.SLASH         = fmt("%s%s|r",   C.COLOR.ORANGE, C.SLASH_WCONQUEST);
 
 C.HELP          = [==[[=Links and Info=]
-SLASH [[link]] [Addon/WConquest/Twitter] - Copy/paste a web link
+SLASH [[link]] [Addon/WConquest/GitHub] - Copy/paste a web link
 SLASH [[inv]] [Discord] - Copy/paste an invite code
 SLASH [[config]] - Configure APPNAME ]==];
 

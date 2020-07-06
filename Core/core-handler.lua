@@ -5,7 +5,6 @@ local HL = LibStub("AceAddon-3.0"):NewAddon(myname, "AceEvent-3.0")
 ns.HL = HL
 
 local login_message           = ns.utils.text.login_message;
-local potd_message            = ns.utils.text.potd_message;
 local get_point_info_by_coord = ns.utils.coords.get_info;
 local get_point_info          = ns.utils.points.get_info;
 local handle_tooltip_by_coord = ns.utils.coords.tt;
@@ -162,7 +161,6 @@ function HL:OnInitialize()
     HandyNotes:RegisterPluginDB(myname:gsub("HandyNotes_", ""), HLHandler, ns.options)
 
     if ns.db.print_login_message then print(login_message()); end;
-    if ns.db.print_potd_message  then print(potd_message());  end;
 
     self:RegisterEvent("ZONE_CHANGED_INDOORS",  "Refresh")
     self:RegisterEvent("ZONE_CHANGED",          "Refresh")

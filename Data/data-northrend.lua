@@ -32,6 +32,8 @@
             mining = [boolean], -- ICON
             alchemy = [boolean], -- ICON
             inn = [boolean], -- ICON
+            magic = [boolean], -- ICON
+            barracks = [boolean], -- ICON
             
 
          -- Villain
@@ -56,7 +58,7 @@
             battle = [boolean], -- ICON battle event location
             naval = [boolean], -- ICON water/vehicle fight location
             horror = [boolean], -- ICON horror event location
-            magic = [boolean], -- ICON magic investigation event location
+            magical = [boolean], -- ICON magical investigation event location
             medical = [boolean], -- ICON medical event location
             report = [boolean], -- ICON escort/report event location
             stealth = [boolean], -- ICON stealth/scout event location
@@ -67,7 +69,10 @@
             hevent = [boolean], -- Horde faction event
             aevent = [boolean], -- Alliance faction event
             nevent = [boolean], -- Neutral faction event
-            phasing = [string], -- provide phasing info
+            phasing = "String.", -- provide phasing info
+
+            campaigntype = "String.", description for larger continent
+            wclogo = big logo for corners
 
          -- Vehicles
             ship = [enum],    -- ICON the size of the ship, LARGE, MEDIUM, SMALL, WRECK, BOAT, SAILBOAT, or LANDING
@@ -112,6 +117,8 @@ if not ns.points then ns.points = {} end;
 -- -------------------------------------------------------------------------------------------------------------------
 ns.points[C.ZONES.DRAGONBLIGHT] = { -- Dragonblight
 
+   [15508270] = { label = "Warcraft Conquest Campaign",         wclogo = true, text = "This map has Warcraft Conquest campaign information. Hover over icons for camps and events. Use /wconquest to find links for more information.", },
+
 -- -------------------------------------------------------------------------------------------------------------------
 -- Events
 -- -------------------------------------------------------------------------------------------------------------------
@@ -128,38 +135,46 @@ ns.points[C.ZONES.DRAGONBLIGHT] = { -- Dragonblight
 -- -------------------------------------------------------------------------------------------------------------------
 -- Alliance Locations
 -- -------------------------------------------------------------------------------------------------------------------
-   [76764763] = { label = "Wintergarde Keep",                    astronghold = true, floors = 3, seats = 7, tables = 2, maxseats = 4, text = "Alliance war headquarters with meeting hall and brig.", },
-   [77415140] = { label = "Wintergarde Inn",                     ainn = true, floors = 3, seats = 8, beds = 4, tables = 5, maxseats = 3, text = "Inn with a bar, kitchen, and beds.", phasing = "Complete Naxxramas and the Fall of Wintergarde.", },
-   [78974532] = { label = "Circle of Battlemagi",                roundtent = true, floors = 1, text = "Center of magic", },
+   [76764763] = { label = "Wintergarde Keep",                    astronghold = true, floors = 3, seats = 7, tables = 2, maxseats = 4, text = "Alliance war headquarters with meeting hall and brig.", npc = "Commander Eligor Dawnbringer", },
+   [77415140] = { label = "Wintergarde Inn",                     inn = true, floors = 3, seats = 8, beds = 4, tables = 5, maxseats = 3, text = "Inn with a bar, kitchen, and beds.", phasing = "Complete Naxxramas and the Fall of Wintergarde.", },
+   [77905026] = { label = "Siegeworks",                          engineering = true, npc = "Siege Engineer Quarterflash", text = "Repairs for armor, weapons, and more.", },
+   [35644657] = { label = "Medics",                              medic = true, text = "Healing and care, fighting to save lives.", npc = "Zielig the Visionary", },
+   [78974532] = { label = "Circle of Battlemagi",                magic = true, floors = 1, text = "Center of magic", npc = "Vas the Unstable", },
+   [89684670] = { label = "Cannons",                             text = "Line of cannons ready to fight", atlas = "Vehicle-Ground-Occupied", scale = 1.50,},
    [39032704] = { label = "Fordragon Hold",                      astronghold = true, text = "Battlecamp of the Alliance with towers and camp", },
    [37202540] = { label = "Alliance Camps",                      camp = true, text = "Tents and provisions in a camp",},
-   [39722452] = { label = "Cannons",                             text = "Line of cannons ready to fight", atlas = "Vehicle-Ground-Occupied", scale = 2.00,},
+   [39722452] = { label = "Cannons",                             text = "Line of cannons ready to fight", atlas = "Vehicle-Ground-Occupied", scale = 1.50,},
    [29005626] = { label = "Star's Rest",                         roundtent = true, text = "Night elven outpost set in ruins", npc = "Commander Saia Azuresteel", },
-   [29515496] = { label = "Glaive Throwers",                     alliance = true, text = "Glaives set to defend the post", npc = "Sentinel Amberline", atlas = "Vehicle-Ground-Occupied", scale = 2.00,},
+   [29515496] = { label = "Glaive Throwers",                     alliance = true, text = "Glaives set to defend the post", npc = "Sentinel Amberline", atlas = "Vehicle-Ground-Occupied", scale = 1.50,},
 -- -------------------------------------------------------------------------------------------------------------------
 -- Horde Locations
 -- -------------------------------------------------------------------------------------------------------------------
    [38354634] = { label = "Agmar's Hammer Stronghold",           hstronghold = true, floors = 3, text = "Horde headquarters with war hall, barracks, and tower.", npc = "Overlord Agmar", beds = 12,  },
    [36434540] = { label = "Horde Supplies",                      supplies = true, text = "Horde supplies for expeditions and battle, General goods, herbs, poisons, and more. ", },
-   [36624716] = { label = "Siegeworks",                          repairs = true, trainer = "Blacksmithing", npc = "Borus Ironbender", stall = true, text = "Repairs for armor, weapons, and more.", },
+   [36624716] = { label = "Siegeworks",                          repairs = true, trainer = "Blacksmithing", npc = "Borus Ironbender",  text = "Repairs for armor, weapons, and more.", },
    [35644657] = { label = "Medics",                              medic = true, text = "Healing and care, fighting to save lives.", npc = "Greatmother Icemist", },
-   [36544934] = { label = "Apothecaries",                        hmagic = true, npc = "Dr. Sintar Malefious", text = "Alchemists and blight of the Horde", },
+   [36544934] = { label = "Apothecaries",                        alchemy = true, npc = "Dr. Sintar Malefious", text = "Alchemists and blight of the Horde", },
    [35814838] = { label = "Kor'kron Guard",                      horde = true, npc = "Captain Gort", text = "Tower of the Kor'kron guard, ready for battle.", atlas = "GarrLanding-MinimapIcon-Horde-Up", scale = 1.50, },
    [41811634] = { label = "Kor'kron Vanguard",                   hstronghold = true, text = "Battlecamp of the Horde with towers and camp", },
-   [41181863] = { label = "Kor'Kron Catapults",                  horde = true, text = "Catapults and buzzsaw weapons", atlas = "Vehicle-Ground-Occupied", scale = 2.00, },
+   [41181863] = { label = "Kor'Kron Catapults",                  horde = true, text = "Catapults and buzzsaw weapons", atlas = "Vehicle-Ground-Occupied", scale = 1.50, },
    [76096136] = { label = "Venomspite",                          horde = true, text = "Village of Venomespite, held by the Forsaken", npc = "High Executor Wroth", atlas = "GarrBuilding_Alchemy_3_H_Info", scale = 2.0, floors = 2, beds = 1, },
    [77006280] = { label = "Vile Tower",                          alchemy = true, npc = "Chief Plaguebringer Middleton", text = "Alchemists and blight of the Horde", floors = 2, },
-   [78256084] = { label = "Venomspite Catapults",                horde = true, text = "Catapults and blight throwers", atlas = "Vehicle-Ground-Occupied", scale = 2.00, },
+   [78256084] = { label = "Venomspite Catapults",                horde = true, text = "Catapults and blight throwers", atlas = "Vehicle-Ground-Occupied", scale = 1.50, },
    [13374761] = { label = "Westwind Refugee Camp",               horde = true, text = "Taunka village with 5 buildings, some tents, and fortifications", atlas = "GarrBuilding_MageTower_2_H_Info", scale = 2.30, },
 
 -- -------------------------------------------------------------------------------------------------------------------
 -- Villain Locations
 -- -------------------------------------------------------------------------------------------------------------------
+   [71577252] = { label = "New Hearthglen",                      scarlet = true, npc = "High Abbot Landgren, High General Abbendus", text = "Height of the Scarlet Onslaught, the walled outpost includes a cathedral, stronghold, and support to wage a bloody war.", },
+   [70967726] = { label = "High General",                        skull = true, text = "Cathedral of the Scarlet Onslaught.", },
+   [73437439] = { label = "High Abbot",                          skull = true, text = "Inner cloister of the Scarlet Onslaught.", },
+   [70197198] = { label = "Scarlet Command",                     skull = true, text = "Stronghold of the Scarlet Onslaught.", },
+   [72198230] = { label = "Scarlet Docks",                       docks = true, text = "Secured docks for the Scarlet Onslaught.", },
    [82016843] = { label = "The Forgotten Shore",                 skullfrost = true, text = "The dead patrol these shores, marked by the drowned and damned", },
    [83365122] = { label = "The Carrion Fields",                  abomination = true, text = "The risen dead continue to patrol and toil towards unknown goals", npc = "Turgid the Vile", },
    [88992720] = { label = "Jintha'kalar",                        necromancer = true, text = "Necromancers raise the dead in unhold ceremonies", npc = "Overseer Deathgaze", },
    [54393153] = { label = "Thiassi The Lightning Bringer",       skullshadow = true, text = "Flesh hangs from the risen brother of Gymer, king of storm giants.", },
-   [78605287] = { label = "Wintergarde Crypt",                   necromancer = true, text = "Depths of darkness and whispers yawns into the earth, tombs broken, and the dead risen.", npc = "Necrolord Amarion", },
+   [78605287] = { label = "Wintergarde Crypt",                   necromancer = true, text = "Depths of darkness and whispers yawns into the earth, tombs broken, and the dead risen.", npc = "Necrolord Amarion", },sw
 
 }; -- /Dragonblight
 -- -------------------------------------------------------------------------------------------------------------------
@@ -171,8 +186,8 @@ ns.points[C.ZONES.ICECROWN] = { -- Icecrown
 -- -------------------------------------------------------------------------------------------------------------------
    [89307900] = { label = "Argent Vanguard",                     camp = true, text = "Neutral camp for a large force", },
    [86787681] = { label = "Argent Medics",                       medic = true, text = "Medics tents and facilities", npc = "Father Gustav", },
-   [85977721] = { label = "Ballista",                            text = "Two ballista ready to fight", atlas = "Vehicle-Ground-Occupied", scale = 2.00, },
-   [87217913] = { label = "Drakes and stables",                  text = "Stables of drakes and horses ready for battle", atlas = "Vehicle-Ground-Occupied", scale = 2.00, },
+   [85977721] = { label = "Ballista",                            text = "Two ballista ready to fight", atlas = "Vehicle-Ground-Occupied", scale = 1.50, },
+   [87217913] = { label = "Drakes and stables",                  text = "Stables of drakes and horses ready for battle", atlas = "Vehicle-Ground-Occupied", scale = 1.50, },
    [79257238] = { label = "Crusader's Pinnacle",                 nstronghold = true, text = "Forward position for Neutral forces with tents, a tower, and cannons", floors = 2, },
    [86007397] = { label = "Argent Vanguard",                     neutral = true, text = "Coalition position in Icecrown", },
 
@@ -210,26 +225,27 @@ ns.points[C.ZONES.ICECROWN] = { -- Icecrown
 ns.points[C.ZONES.BOREANTUNDRA] = { -- Borean Tundra
 -- -------------------------------------------------------------------------------------------------------------------
 
+[15508270] = { label = "Warcraft Conquest Campaign", wclogo = true, text = "This map has Warcraft Conquest campaign information. Hover over icons for camps and events. Use /wconquest to find links for more information.", },
+
 -- -------------------------------------------------------------------------------------------------------------------
 -- Alliance Locations
 -- -------------------------------------------------------------------------------------------------------------------
    [56707150] = { label = "Valiance Keep",                       astronghold = true, floors = 3, seats = 7, tables = 2, maxseats = 4, text = "Alliance war headquarters with meeting hall, brig, and dock.", },
-   [58527000] = { label = "Valiant Rest",                        ainn = true, floors = 3, seats = 8, beds = 4, tables = 5, maxseats = 3, text = "Inn with a bar, kitchen, and beds.", },
-   [57256648] = { label = "Strongstout Smithy",                  repairs = true, trainer = "Blacksmithing", npc = "Argo Strongstout", stall = true, text = "Repairs for armor, weapons, and more.", },
+   [58527000] = { label = "Valiant Rest",                        inn = true, floors = 3, seats = 8, beds = 4, tables = 5, maxseats = 3, text = "Inn with a bar, kitchen, and beds.", },
+   [57256648] = { label = "Strongstout Smithy",                  repairs = true, trainer = "Blacksmithing", npc = "Argo Strongstout", text = "Repairs for armor, weapons, and more.", },
    [58246613] = { label = "Practice Yard",                       alliance = true, atlas = "worldquest-icon-pvp-ffa", scale = 1.10, text = "Practice yards for melee and ranged.", },
    [60416984] = { label = "Valiant Docks",                       docks = true, text = "Alliance docks and harbor.", },
    [57555913] = { label = "Farshire",                            alliance = true, atlas = "GarrBuilding_TownHall_2_A_Info", scale = 2.00, text = "Townhall, lighthouse, farms, and mines to aid the Alliance.", seats = 3, floors = 2, },
    [57501901] = { label = "Fizzcrank Airstrip",                  text = "Alliance engineering corps and airstrip.", atlas = "GarrBuilding_Workshop_1_A_Info", scale = 2.0, },
-   [56452001] = { label = "Chief Engineer Galpen Rolltie",       engineering = true, trainer = "Engineering", stall = true, text = "Master chief of engineering", },
+   [56452001] = { label = "Chief Engineer Galpen Rolltie",       engineering = true, trainer = "Engineering",  text = "Master chief of engineering", },
 
 -- -------------------------------------------------------------------------------------------------------------------
 -- Horde Locations
 -- -------------------------------------------------------------------------------------------------------------------
    [40305190] = { label = "Warsong Hold",                        hstronghold = true, floors = 3, text = "Horde headquarters with war hall, brig, and zepplin", },
-   [42625294] = { label = "Chief Engineer Leveny",               engineering = true, trainer = "Engineering", stall = true, text = "Master chief of engineering", },
-   [42435427] = { label = "Warsong Engineering Bay",             horde = true, atlas = "GarrBuilding_Workshop_2_H_Info", scale = 2.00, text = "Metalworking, engineering, and bombs, lower floor of Warsong Hold.", },
-   [41005557] = { label = "Warsong Smithy",                      repairs = true, trainer = "Blacksmithing", npc = "Armorer Orkuruk", stall = true, text = "Repairs for armor, weapons, and more", },
-   [40185510] = { label = "Warsong Stables",                     horde = true, npc = "Durkot Wolfbrother", stall = true, atlas = "WildBattlePet",  scale = 1.1, text = "Worgs for the Horde", },
+   [42625294] = { label = "Warsong Engineering Bay",             engineering = true, npc = "Chief Engineer Leveny", text = "Metalworking, engineering, and bombs, lower floor of Warsong Hold.", },
+   [41005557] = { label = "Warsong Smithy",                      repairs = true, trainer = "Blacksmithing", npc = "Armorer Orkuruk", text = "Repairs for armor, weapons, and more", },
+   [40185510] = { label = "Warsong Stables",                     horde = true, npc = "Durkot Wolfbrother",  atlas = "WildBattlePet",  scale = 1.1, text = "Worgs for the Horde", },
    [49531027] = { label = "Bor'gorok Outpost",                   horde = true, text = "Horde outpost with provisions and wolf riders", atlas = "GarrBuilding_TownHall_2_H_Info", scale = 2.0, },
    [75783680] = { label = "Taunka'le Village",                   horde = true, text = "Taunka village with a central, stable, shaman, and druid halls.", npc = "Chieftain Wintergale", atlas = "GarrBuilding_MageTower_2_H_Info", scale = 2.00, },
    [77593680] = { label = "Druid Hall",                          horde = true, text = "Druid hall", npc = "Greatmother Taiga", atlas = "groupfinder-icon-class-druid", scale = 1.40,},
@@ -266,7 +282,7 @@ ns.utils.points.translate(ns.points[C.ZONES.BOREANTUNDRA],  C.ZONES.BOREANTUNDRA
 -- Check if any points belong on the Dragonblight map
 -- -------------------------------------------------------------------------------------------------------------------
 ns.utils.points.translate(ns.points[C.ZONES.ICECROWN], C.ZONES.ICECROWN, C.ZONES.DRAGONBLIGHT);
-ns.utils.points.translate(ns.points[C.ZONES.BOREANTUNDRA],  C.ZONES.BOREANTUNDRA,  C.ZONES.DRAGONBLIGHT);
+ns.utils.points.translate(ns.points[C.ZONES.BOREANTUNDRA],  C.ZONES.BOREANTUNDRA, C.ZONES.DRAGONBLIGHT);
 -- -------------------------------------------------------------------------------------------------------------------
 -- Check if any points belong on the Icecrown map
 -- -------------------------------------------------------------------------------------------------------------------
