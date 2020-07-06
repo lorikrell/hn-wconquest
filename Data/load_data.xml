@@ -6,6 +6,7 @@
 
         <Script file="data-northrend.lua" />
         <Script file="data-dalaran.lua" />
+        <Script file="data-continent.lua" />
 <!--        <Script file="data-kultiras.lua" /> -->
 
 </Ui>

@@ -11,7 +11,6 @@ local ss       = ns.utils.text.ss;
 local plur     = ns.utils.text.plur;
 local colorize = ns.utils.text.colorize;
 local HBD      = LibStub("HereBeDragons-2.0");
-local LOGO     = "Interface\\AddOns\\HandyNotes_WarcraftConquest\\Art"
 
 -- -------------------------------------------------------------------------------------------------------------------
 local function get_current_location()
@@ -101,7 +100,8 @@ local function work_out_label(point)
 
     -- change the colors for ships and closed stuff and empty stuff and official stuff
     if        point.official                                  then r, g, b = 0, 0.75, 1;
-       elseif point.event or point.battle or point.naval or point.tank or point.horror or point.magic or point.medical or point.report or point.stealth     then r, g, b = 0, 0.75, 1;
+       elseif point.event or point.battle or point.naval or point.tank or point.horror or point.magical or point.medical or point.report or point.stealth     then r, g, b = 0, 0.75, 1;
+       elseif point.wclogo or point.campaign then r, g, b = 0.1, 0.6, 1; 
        elseif point.spoiler                                   then r, g, b = 1, 0.5, 0;  label = "Spoilers: " .. label
        elseif point.empty and point.closed and not point.ship then r, g, b = 0.75, 0.75, 0.75; label = label .. " [empty, closed]"
        elseif point.empty                                     then r, g, b = 1, 1, 1;          label = label .. " [empty]"
@@ -166,6 +166,7 @@ local function work_out_texture(point)
     elseif point.alcohol      and (ns.db.show_misc  or custom)          then texture = t.alcohol
     elseif point.cuisine      and (ns.db.show_misc  or custom)          then texture = t.food
     elseif point.event        and (ns.db.show_event  or custom)         then texture = t.event
+    elseif point.campaign     and (ns.db.show_campaign  or custom)      then texture = t.campaign
     elseif point.docks        and (ns.db.show_vehicles  or custom)      then texture = t.docks
 
     -- Adding custom images
@@ -173,8 +174,8 @@ local function work_out_texture(point)
     elseif point.battle      and (ns.db.show_event  or custom)         then texture = battle
     elseif point.naval       and (ns.db.show_vehicles  or custom)      then texture = naval
     elseif point.horror      and (ns.db.show_event  or custom)         then texture = horror
-    elseif point.magic       and (ns.db.show_event  or custom)         then texture = magic
-    elseif point.medical     and (ns.db.show_event  or custom)       then texture = medic
+    elseif point.magical     and (ns.db.show_event  or custom)         then texture = magical
+    elseif point.medical     and (ns.db.show_event  or custom)         then texture = medical
     elseif point.report      and (ns.db.show_event  or custom)         then texture = report
     elseif point.stealth     and (ns.db.show_event  or custom)         then texture = stealth
 
@@ -185,6 +186,8 @@ local function work_out_texture(point)
     elseif point.inn         and (ns.db.show_camp or custom)           then texture = inn
     elseif point.alchemy     and (ns.db.show_camp or custom)           then texture = alchemy
     elseif point.engineering and (ns.db.show_camp or custom)           then texture = engineering
+    elseif point.magic       and (ns.db.show_camp or custom)           then texture = magic
+    elseif point.barracks    and (ns.db.show_camp or custom)           then texture = barracks
 
     elseif point.ziggeraut   and (ns.db.show_villain or custom)        then texture = ziggeraut
     elseif point.skullblood  and (ns.db.show_villain or custom)        then texture = skullblood
@@ -197,8 +200,9 @@ local function work_out_texture(point)
     elseif point.skeleton    and (ns.db.show_villain or custom)        then texture = skeleton
     elseif point.knight      and (ns.db.show_villain or custom)        then texture = knight
     elseif point.vault       and (ns.db.show_camp or custom)           then texture = vault
+    elseif point.scarlet     and (ns.db.show_villain or custom)        then texture = scarlet
 
-
+    elseif point.wclogo      and (ns.db.show_campaign or custom)       then texture = wclogo
    -- Hiding these textures for now
     -- elseif point.basement     and (ns.db.show_misc  or custom)          then texture = t.basement
     -- elseif point.beds         and (ns.db.show_misc  or custom)          then texture = t.bed
@@ -368,6 +372,10 @@ local function tt_details(point)
       r, g, b = 1, 1, 1;
       if point.eventtype then table.insert(section, { {" ", "Type: " .. point.eventtype .. "" }, r, g, b});
       end;
+
+      r, g, b = 1, 1, 1;
+      if point.campaigntype then table.insert(section, { {"Campaign: " .. point.campaigntype .. "" }, r, g, b});
+      end;
   
       -- seating
       if point.seats or point.tables or point.desks or point.maxseats then 
@@ -513,6 +521,7 @@ local function should_show_point(coord, point, currentZone, isMinimap)
       if ns.db.show_camp     and point.repairs           then show = true; end;
       if ns.db.show_camp     and point.supplies          then show = true; end;
       if ns.db.show_camp     and point.inn               then show = true; end;
+      if ns.db.show_camp     and point.barracks          then show = true; end;
       if ns.db.show_camp     and point.alchemy           then show = true; end;
       if ns.db.show_camp     and point.engineering       then show = true; end;
       if ns.db.show_camp     and point.vault             then show = true; end;
@@ -530,6 +539,7 @@ local function should_show_point(coord, point, currentZone, isMinimap)
       if ns.db.show_villain  and point.necromancer       then show = true; end;
       if ns.db.show_villain  and point.skeleton          then show = true; end;
       if ns.db.show_villain  and point.knight            then show = true; end;
+      if ns.db.show_villain  and point.scarlet            then show = true; end;
       if ns.db.show_camp     and point.camp              then show = true; end;
       if ns.db.show_vehicles and point.docks             then show = true; end;
       if ns.db.show_vehicles and point.allianceair       then show = true; end;
@@ -540,10 +550,14 @@ local function should_show_point(coord, point, currentZone, isMinimap)
       if ns.db.show_event    and point.event             then show = true; end;
       if ns.db.show_event    and point.battle            then show = true; end;
       if ns.db.show_event    and point.horror            then show = true; end;
-      if ns.db.show_event    and point.magic             then show = true; end;
+      if ns.db.show_event    and point.magical           then show = true; end;
       if ns.db.show_event    and point.medical           then show = true; end;
       if ns.db.show_event    and point.report            then show = true; end;
       if ns.db.show_event    and point.stealth           then show = true; end;
+      if ns.db.show_campaign and point.wclogo            then show = true; end;
+      if ns.db.show_campaign and point.campaign          then show = true; end;
+      if ns.db.show_camp     and point.medic             then show = true; end;
+      if ns.db.show_camp     and point.magic             then show = true; end;
       if ns.db.show_spoilers and point.spoiler == "list" then show = true; end;
       if ns.db.show_misc     and not point.ship
                              and not point.alliance
@@ -589,10 +603,13 @@ local function should_show_point(coord, point, currentZone, isMinimap)
                              and not point.naval
                              and not point.tank
                              and not point.horror
+                             and not point.magical
                              and not point.magic
-                             and not point.medic
                              and not point.report
                              and not point.stealth
+                             and not point.wclogo
+                             and not point.campaign
+                             and not point.scarlet
                            and not point.spoiler       then show = true; end;
 
     -- try to find a reason to not show it

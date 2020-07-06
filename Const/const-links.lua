@@ -9,11 +9,11 @@ local meta      = GetAddOnMetadata;
 
 local invite_base    = "https://worldofwarcraft.com/en-us/invite/%s?region=US&faction=Alliance";
 
-C.LINK.City_Prefix  = "https://gamerchic.org/warcraft-conquest/addon.html";
-C.LINK.City         = "";
-C.LINK.City_URL     = "https://gamerchic.org/warcraft-conquest/warcraft-conquest.html";
-C.LINK.City_Label   = "Warcraft Conquest Sites";
-C.LINK.City_Help    = fmt("SLASH [[link Website]] - %s - [%s%s]", C.LINK.City_Label, C.LINK.City_Prefix, C.LINK.City);
+C.LINK.WConquest_Prefix  = "https://gamerchic.org/warcraft-conquest/addon.html";
+C.LINK.WConquest         = "";
+C.LINK.WConquest_URL     = "https://gamerchic.org/warcraft-conquest/warcraft-conquest.html";
+C.LINK.WConquest_Label   = "Warcraft Conquest Sites";
+C.LINK.WConquest_Help    = fmt("SLASH [[link Website]] - %s - [%s%s]", C.LINK.WConquest_Label, C.LINK.WConquest_Prefix, C.LINK.WConquest);
 
 C.LINK.Discord      = "/discord";
 C.LINK.Discord_Code = "gsbdHE9";
@@ -21,19 +21,19 @@ C.LINK.Discord_URL  = "https://discord.gg/gsbdHE9/";
 C.LINK.Discord_Label = "Warcraft Conquest Discord";
 C.LINK.Discord_Help = fmt("SLASH [[invite discord]] - %s - [%s]", C.LINK.Discord_Label, C.LINK.Discord_Code);
 
-C.LINK.RPSpots      = "/addon";
-C.LINK.RPSpots_URL  = "https://wow.curseforge.com/projects/handynotes-warcraft-conquest";
-C.LINK.RPSpots_Label = "HandyNotes: Warcraft Conquest";
-C.LINK.RPSpots_Help = fmt("SLASH [[link Addon]] - %s - [%s%s]", C.LINK.RPSpots_Label, C.LINK.City_Prefix, C.LINK.RPSpots);
+C.LINK.Site      = "/addon";
+C.LINK.Site_URL  = "https://wow.curseforge.com/projects/handynotes-warcraft-conquest";
+C.LINK.Site_Label = "HandyNotes: Warcraft Conquest";
+C.LINK.Site_Help = fmt("SLASH [[link Addon]] - %s - [%s%s]", C.LINK.Site_Label, C.LINK.WConquest_Prefix, C.LINK.Site);
 
-C.LINK.Twitter      = "/twitter";
-C.LINK.Twitter_URL  = "http://twitter.com/lorioliodraws";
-C.LINK.Twitter_Label = "Sonceri - Creator Twitter";
-C.LINK.Twitter_Help = fmt("SLASH [[link Twitter]] - %s - [%s%s]", C.LINK.Twitter_Label, C.LINK.City_Prefix, C.LINK.Twitter);
+C.LINK.GitHub      = "/github";
+C.LINK.GitHub_URL  = "https://github.com/lorikrell/hn-wconquest";
+C.LINK.GitHub_Label = "HN-WConquest GitHub";
+C.LINK.GitHub_Help = fmt("SLASH [[link GitHub]] - %s - [%s%s]", C.LINK.GitHub_Label, C.LINK.WConquest_Prefix, C.LINK.GitHub);
 
-C.LINK.Links = C.LINK.City_Help    .. "\n" ..
-               C.LINK.RPSpots_Help .. "\n" .. 
-               C.LINK.Twitter_Help;
+C.LINK.Links = C.LINK.WConquest_Help    .. "\n" ..
+               C.LINK.Site_Help .. "\n" .. 
+               C.LINK.GitHub_Help;
 
 C.LINK.Invites = C.LINK.Discord_Help; 
 

@@ -20,3 +20,4 @@ WConquest addon is based on the fantastic addon [HandyNotes: Boralus RP Spots](h
 ## Contact
 
 Created by Sonceri, Horde Moon Guard US - Discord Loriolio#5076, Twitter https://twitter.com/lorioliodraws
+GitHub https://github.com/lorikrell/hn-wconquest

@@ -39,7 +39,7 @@ local function inviteFrame(inv)
        local cityLink = AceGUI:Create("EditBox");
        cityLink:SetLabel("Addon Site");
        cityLink:SetWidth(200);
-       cityLink:SetText(C.LINK.City_Prefix);
+       cityLink:SetText(C.LINK.WConquest_Prefix);
        cityLink:DisableButton(true);
        cityLink.editbox:SetScript("OnEditFocusGained", function() cityLink:HighlightText() end);
        cityLink.editbox:SetScript("OnEscapePressed", function() invite:Release() end);

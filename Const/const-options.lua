@@ -23,6 +23,7 @@ ns.defaults = {
         show_supplies = true,
         show_event = true,
         show_vehicles = true,
+        show_campaign = true,
 
         use_custom = false,
         custom_filter = nil,
@@ -41,7 +42,6 @@ ns.defaults = {
         icon_alpha = 1.0,
 
         print_login_message = true,
-        print_potd_message = true,
     },
     char = {
         hidden = {
@@ -80,11 +80,12 @@ ns.options = {
         show_alliance = { type = "toggle", name = "Alliance War Effort",    order = 420, desc = "Show Alliance representatives and locations",             },
         show_horde    = { type = "toggle", name = "Horde War Effort",       order = 421, desc = "Show Horde representatives and locations",                },
         show_neutral  = { type = "toggle", name = "Neutral War Effort",     order = 422, desc = "Show Neutral representatives and locations",              },
-        show_ships    = { type = "toggle", name = "Vehicles",               order = 423, desc = "Show ships and airships",                                 },
-        show_camp     = { type = "toggle", name = "Camps",                  order = 425, desc = "Show camp grounds and tents",                             },
-        show_villain  = { type = "toggle", name = "Villains",               order = 426, desc = "Show enemy locations and villains",                       },
-        show_supplies = { type = "toggle", name = "Supplies",               order = 427, desc = "Show supplies to collect or capture",                     },
-        show_event    = { type = "toggle", name = "Events",                 order = 427, desc = "Show event locations for campaigns",                      },
+        show_campaign = { type = "toggle", name = "Campaigns",              order = 423, desc = "Show active WC campaigns",                                },
+        show_event    = { type = "toggle", name = "Events",                 order = 424, desc = "Show event locations for campaigns",                      },
+        show_ships    = { type = "toggle", name = "Vehicles",               order = 425, desc = "Show ships and airships",                                 },
+        show_camp     = { type = "toggle", name = "Camps",                  order = 426, desc = "Show camp grounds and tents",                             },
+        show_villain  = { type = "toggle", name = "Villains",               order = 427, desc = "Show enemy locations and villains",                       },
+        show_supplies = { type = "toggle", name = "Supplies",               order = 428, desc = "Show supplies to collect or capture",                     },
         show_spoilers = { type = "toggle", name = "Spoilers",               order = 470, desc = "Show hints for quests, achievements, and puzzles",        },
         show_misc     = { type = "toggle", name = "Miscellaneous",          order = 499, desc = "Show everything else",                                    },
       }, },

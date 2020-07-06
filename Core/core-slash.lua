@@ -15,7 +15,6 @@ local hilite        = ns.utils.text.hilite_and_replace;
 local links         = ns.utils.text.links_list;
 local invite        = ns.utils.frame.invite;
 local login_message = ns.utils.text.login_message;
-local potd_message  = ns.utils.text.potd_message;
 
 -- -------------------------------------------------------------------------------------------------------------------
 -- Processing commands for the custom filter
@@ -124,16 +123,13 @@ local function slashWconquest(a)
   -- /wconquest version -- show use the login message -------------------------------------------------------------------
   if cmd == "version" then print(login_message()) return end;
 
-  -- /wconquest potd (or sotd because I forget sometimes) -- show the point of the day ----------------------------------
-  if cmd == "potd" or cmd == "sotd" or cmd == "daily" or cmd == "today" then print(potd_message()) return end;
-
   -- /wconquest inv[vite[s]] or /wconquest link[s] ---------------------------------------------------------------------------
   if cmd == "inv"  or cmd == "invite" or cmd == "invites" or 
      cmd == "link" or cmd == "links"
-     then if arg == "wconquest"  or arg == "site"  then invite("City");
+     then if arg == "wconquest"  or arg == "site"  then invite("WConquest");
       elseif arg == "discord"                    then invite("Discord");
-      elseif arg == "twitter"                    then invite("Twitter");
-      elseif arg == "addon"                      then invite("RPSpots");
+      elseif arg == "github"                    then invite("GitHub");
+      elseif arg == "addon"                      then invite("Site");
       else print(fmt("%s %s", C.WCONQUEST, hilite(links())))
       end;
       return;

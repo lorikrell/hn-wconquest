@@ -85,7 +85,6 @@ ns.utils.text.plur               = plur;
 ns.utils.text.fmt                = string.format;
 ns.utils.text.hilite_and_replace = hilite_and_replace;
 ns.utils.text.login_message      = login_message;
-ns.utils.text.potd_message       = potd_message;
 ns.utils.text.split              = split;
 ns.utils.text.colorize           = colorize;
 ns.utils.text.links_list         = links_list;
