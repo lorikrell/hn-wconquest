@@ -70,6 +70,7 @@ local function getInfo(point)
       if point.schedule then text = text .. ": " .. C.COLOR.YELLOW .. point.schedule .. "|r" end;
       if point.text then text = text .. ": " .. C.COLOR.YELLOW .. point.text .. "|r" end;
       if point.phasing then text = text .. ": " .. C.COLOR.YELLOW .. point.phasing .. "|r" end;
+      if point.proxy then text = text .. ": " .. C.COLOR.YELLOW .. point.proxy .. "|r" end;
       point.cache.info = text;
       return text
 end; 
@@ -100,7 +101,9 @@ local function work_out_label(point)
 
     -- change the colors for ships and closed stuff and empty stuff and official stuff
     if        point.official                                  then r, g, b = 0, 0.75, 1;
-       elseif point.event or point.battle or point.naval or point.tank or point.horror or point.magical or point.medical or point.report or point.stealth     then r, g, b = 0, 0.75, 1;
+       elseif point.event or point.battle or point.naval or point.tank or point.horror or point.magical or point.medical or point.report or point.stealth     then r, g, b = 1, 0.9, 0.6;
+       elseif point.hbattle or point.hhorror or point.hmagical or point.hreport or point.hstealth     then r, g, b = 1, 0.1, 0;
+       elseif point.abattle or point.ahorror or point.amagical or point.areport or point.astealth     then r, g, b = 0.2, 0.7, 1;
        elseif point.wclogo or point.campaign then r, g, b = 0.1, 0.6, 1; 
        elseif point.spoiler                                   then r, g, b = 1, 0.5, 0;  label = "Spoilers: " .. label
        elseif point.empty and point.closed and not point.ship then r, g, b = 0.75, 0.75, 0.75; label = label .. " [empty, closed]"
@@ -164,7 +167,6 @@ local function work_out_texture(point)
     elseif point.camp         and (ns.db.show_camp or custom)           then texture = t.camp
     elseif point.boss         and (ns.db.show_villain or custom)        then texture = t.boss
     elseif point.alcohol      and (ns.db.show_misc  or custom)          then texture = t.alcohol
-    elseif point.cuisine      and (ns.db.show_misc  or custom)          then texture = t.food
     elseif point.event        and (ns.db.show_event  or custom)         then texture = t.event
     elseif point.campaign     and (ns.db.show_campaign  or custom)      then texture = t.campaign
     elseif point.docks        and (ns.db.show_vehicles  or custom)      then texture = t.docks
@@ -179,15 +181,33 @@ local function work_out_texture(point)
     elseif point.report      and (ns.db.show_event  or custom)         then texture = report
     elseif point.stealth     and (ns.db.show_event  or custom)         then texture = stealth
 
+    elseif point.abattle      and (ns.db.show_event  or custom)         then texture = abattle
+    elseif point.ahorror      and (ns.db.show_event  or custom)         then texture = ahorror
+    elseif point.amagical     and (ns.db.show_event  or custom)         then texture = amagical
+    elseif point.areport      and (ns.db.show_event  or custom)         then texture = areport
+    elseif point.astealth     and (ns.db.show_event  or custom)         then texture = astealth
+
+    elseif point.hbattle      and (ns.db.show_event  or custom)         then texture = hbattle
+    elseif point.hhorror      and (ns.db.show_event  or custom)         then texture = hhorror
+    elseif point.hmagical     and (ns.db.show_event  or custom)         then texture = hmagical
+    elseif point.hreport      and (ns.db.show_event  or custom)         then texture = hreport
+    elseif point.hstealth     and (ns.db.show_event  or custom)         then texture = hstealth
+
     elseif point.repairs     and (ns.db.show_camp or custom)           then texture = repairs
+    elseif point.cuisine      and (ns.db.show_misc  or custom)         then texture = food
     elseif point.mining      and (ns.db.show_camp or custom)           then texture = mining
     elseif point.medic       and (ns.db.show_camp or custom)           then texture = medic
     elseif point.supplies    and (ns.db.show_camp or custom)           then texture = supplies
     elseif point.inn         and (ns.db.show_camp or custom)           then texture = inn
+    elseif point.food        and (ns.db.show_camp or custom)           then texture = food
     elseif point.alchemy     and (ns.db.show_camp or custom)           then texture = alchemy
     elseif point.engineering and (ns.db.show_camp or custom)           then texture = engineering
     elseif point.magic       and (ns.db.show_camp or custom)           then texture = magic
     elseif point.barracks    and (ns.db.show_camp or custom)           then texture = barracks
+
+    elseif point.acamp       and (ns.db.show_camp or custom)           then texture = acamp
+    elseif point.hcamp       and (ns.db.show_camp or custom)           then texture = hcamp
+    elseif point.ncamp       and (ns.db.show_camp or custom)           then texture = ncamp
 
     elseif point.ziggeraut   and (ns.db.show_villain or custom)        then texture = ziggeraut
     elseif point.skullblood  and (ns.db.show_villain or custom)        then texture = skullblood
@@ -335,7 +355,7 @@ local function tt_type_of_thing(point)
                elseif point.wares    then table.insert(section, { { point.npc, point.wares}, r, g, b } );
                elseif point.alcohol  then table.insert(section, { { point.npc, "Bartender"}, r, g, b } );
                elseif point.cuisine  then table.insert(section, { { point.npc, "Server"},    r, g, b } );
-               elseif point.hevent   then table.insert(section, { { point.npc, "Horde DM"}, 0.9, 0, 0 } );
+               elseif point.hevent   then table.insert(section, { { point.npc, "Horde DM"}, 1, 0.1, 0 } );
                elseif point.aevent   then table.insert(section, { { point.npc, "Alliance DM"}, 0.2, 0.7, 1 } );
                elseif point.nevent   then table.insert(section, { { point.npc, "Neutral DM"}, 1, 0.9, 0.6 } );
                else                       table.insert(section, { { point.npc, "NPC"},       r, g, b } );
@@ -421,19 +441,25 @@ end;
 
 local function tt_schedule(point)
    local section = {};
-   if point.schedule then table.insert(section, { "|cffbbbbbbSchedule:|r " .. point.schedule, 1, 0.75, 0 } ); end; -- if
+   if point.schedule then table.insert(section, { "|cff33E6CCSchedule:|r " .. point.schedule, .2, 0.9, 0.8 } ); end; -- if
    return section;
 end;
 
 local function tt_text(point)
       local section = {};
-      if point.text then table.insert(section, { "|cffbbbbbbNote:|r " .. point.text, 1, 0.75, 0 } ); end; -- if
+      if point.text then table.insert(section, { "|cfffdd03bEvent:|r " .. point.text, .9, .9, .9 } ); end; -- if
       return section;
 end;
 
 local function tt_phasing(point)
    local section = {};
-   if point.phasing then table.insert(section, { "|cffbbbbbbPhasing:|r " .. point.phasing, 1, 0.75, 0 } ); end; -- if
+   if point.phasing then table.insert(section, { "|cffFFFF00Phasing:|r " .. point.phasing, 1, 1, 0 } ); end; -- if
+   return section;
+end;
+
+local function tt_proxy(point)
+   local section = {};
+   if point.proxy then table.insert(section, { "|cffFFFF00Proxy:|r " .. point.proxy, 1, 1, 0 } ); end; -- if
    return section;
 end;
 
@@ -468,7 +494,8 @@ local function handle_tooltip(tooltip, point)
                     details  = tt_details(       point),
                     schedule = tt_schedule(      point),
                     text     = tt_text(          point),
-                    phasing  = tt_phasing(       point), }
+                    phasing  = tt_phasing(       point),
+                    proxy    = tt_proxy(         point), }
             point.cache.tooltip = tip;
        end;
 
@@ -480,6 +507,7 @@ local function handle_tooltip(tooltip, point)
     populate(tip.schedule,    true);
     populate(tip.text,    true);
     populate(tip.phasing, true);
+    populate(tip.proxy, true);
 
     -- show the tooltip
     tooltip:Show()
@@ -521,6 +549,7 @@ local function should_show_point(coord, point, currentZone, isMinimap)
       if ns.db.show_camp     and point.repairs           then show = true; end;
       if ns.db.show_camp     and point.supplies          then show = true; end;
       if ns.db.show_camp     and point.inn               then show = true; end;
+      if ns.db.show_camp     and point.food              then show = true; end;
       if ns.db.show_camp     and point.barracks          then show = true; end;
       if ns.db.show_camp     and point.alchemy           then show = true; end;
       if ns.db.show_camp     and point.engineering       then show = true; end;
@@ -539,8 +568,11 @@ local function should_show_point(coord, point, currentZone, isMinimap)
       if ns.db.show_villain  and point.necromancer       then show = true; end;
       if ns.db.show_villain  and point.skeleton          then show = true; end;
       if ns.db.show_villain  and point.knight            then show = true; end;
-      if ns.db.show_villain  and point.scarlet            then show = true; end;
+      if ns.db.show_villain  and point.scarlet           then show = true; end;
       if ns.db.show_camp     and point.camp              then show = true; end;
+      if ns.db.show_camp     and point.acamp             then show = true; end;
+      if ns.db.show_camp     and point.hcamp             then show = true; end;
+      if ns.db.show_camp     and point.ncamp             then show = true; end;
       if ns.db.show_vehicles and point.docks             then show = true; end;
       if ns.db.show_vehicles and point.allianceair       then show = true; end;
       if ns.db.show_vehicles and point.hordeair          then show = true; end;
@@ -554,6 +586,16 @@ local function should_show_point(coord, point, currentZone, isMinimap)
       if ns.db.show_event    and point.medical           then show = true; end;
       if ns.db.show_event    and point.report            then show = true; end;
       if ns.db.show_event    and point.stealth           then show = true; end;
+      if ns.db.show_event    and point.abattle           then show = true; end;
+      if ns.db.show_event    and point.ahorror           then show = true; end;
+      if ns.db.show_event    and point.amagical          then show = true; end;
+      if ns.db.show_event    and point.areport           then show = true; end;
+      if ns.db.show_event    and point.astealth          then show = true; end;
+      if ns.db.show_event    and point.hbattle           then show = true; end;
+      if ns.db.show_event    and point.hhorror           then show = true; end;
+      if ns.db.show_event    and point.hmagical          then show = true; end;
+      if ns.db.show_event    and point.hreport           then show = true; end;
+      if ns.db.show_event    and point.hstealth          then show = true; end;
       if ns.db.show_campaign and point.wclogo            then show = true; end;
       if ns.db.show_campaign and point.campaign          then show = true; end;
       if ns.db.show_camp     and point.medic             then show = true; end;
@@ -589,6 +631,7 @@ local function should_show_point(coord, point, currentZone, isMinimap)
                              and not point.medic
                              and not point.medical
                              and not point.inn
+                             and not point.food
                              and not point.alchemy
                              and not point.repairs
                              and not point.mining
@@ -607,9 +650,22 @@ local function should_show_point(coord, point, currentZone, isMinimap)
                              and not point.magic
                              and not point.report
                              and not point.stealth
+                             and not point.hhorror
+                             and not point.hmagical
+                             and not point.hreport
+                             and not point.hstealth
+                             and not point.hbattle
+                             and not point.ahorror
+                             and not point.amagical
+                             and not point.areport
+                             and not point.astealth
+                             and not point.abattle
                              and not point.wclogo
                              and not point.campaign
                              and not point.scarlet
+                             and not point.acamp
+                             and not point.hcamp
+                             and not point.ncamp
                            and not point.spoiler       then show = true; end;
 
     -- try to find a reason to not show it
