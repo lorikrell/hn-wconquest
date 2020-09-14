@@ -8,8 +8,9 @@ if not ns.points then ns.points = {} end;
 
 ns.points[C.ZONES.NORTHREND] = { -- Northrend continent
 
-  [50505240] = { label = "WC - Northrend Campaign",       campaign = true, campaigntype = "Pre-Shadowlands", text = "The Coalition answers the call to battle the scourge in a coming storm.",  },
-  [26105990] = { label = "WC - Northrend Campaign",       campaign = true, campaigntype = "Pre-Shadowlands", text = "The Coalition answers the call to battle the scourge in a coming storm.",  },
+  [50505240] = { label = "WC - Northrend Campaign",       campaign = true, campaigntype = "Pre-Shadowlands", text = "The Coalition seeks Dragonblight to set up camp and press back the Scourge.",  },
+  [26105990] = { label = "WC - Northrend Campaign",       campaign = true, campaigntype = "Pre-Shadowlands", text = "The Coalition answers the call for aid, tracking and ending the Scourge.",  },
+  [39603340] = { label = "WC - Northrend Campaign",       campaign = true, campaigntype = "Pre-Shadowlands", text = "Onward into Icecrown, the Coalition war towards Icecrown Citadel.",  },
 };
 
 -- -------------------------------------------------------------------------------------------------------------------

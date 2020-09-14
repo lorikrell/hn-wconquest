@@ -45,6 +45,7 @@
             aevent = [boolean], -- Alliance faction event
             nevent = [boolean], -- Neutral faction event
             phasing = [string], -- provide phasing info
+            proxy = [string], -- provide info on a proxy location
 
          -- Vehicles
             ship = [enum],    -- ICON the size of the ship, LARGE, MEDIUM, SMALL, WRECK, BOAT, SAILBOAT, or LANDING

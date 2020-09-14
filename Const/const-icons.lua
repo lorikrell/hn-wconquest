@@ -17,12 +17,12 @@ t.ship.WRECK    = atlas("MantidTowerDestroyed",                           2.00);
 t.ship.SAILBOAT = atlas("Ships_TroopTransport-Map",                       2.00);
 t.ship.BOAT     = atlas("FlightMasterFerry",                              1.60);
 t.ship.LANDING  = atlas("ShipMissionIcon-SiegeA-Map",                     2.00);
+t.alliance      = atlas("ShipMissionIcon-SiegeA-Map",                     2.00);
 t.allianceair   = atlas("Vehicle-Air-Alliance",                           2.00);
 t.hordeair      = atlas("Vehicle-Air-Horde",                              2.00);
 t.official      = atlas("ShipMissionIcon-Training-Map",                   1.85);
 t.academy       = atlas("Profession",                                     1.65);
 t.shop          = atlas("poi-town",                                       1.25);
-t.alliance      = atlas("ShipMissionIcon-SiegeA-Map",                     2.00);
 t.closed        = atlas("PlayerNeutral",                                  1.75);
 t.default       = atlas("PlayerFriend",                                   1.75);
 t.astronghold   = atlas("GarrBuilding_Barracks_2_A_Info",                 4.00);
@@ -41,7 +41,6 @@ t.boss          = atlas("BossBanner-SkullCircle",                         2.00);
 t.leader        = atlas("StoryHeader-CheevoIcon",                         1.30);
 t.docks         = atlas("ShipMissionIcon-Training-Map",                   2.00);
 t.alcohol       = atlas("Innkeeper",                                      2.00);
-t.food          = atlas("Food",                                           1.50);
 t.event         = atlas("QuestPortraitIcon-SandboxQuest",                 2.00);
 
 -- Map icon for campaigns for continent maps
@@ -70,6 +69,22 @@ magical = { icon = "Interface\\AddOns\\HandyNotes_WarcraftConquest\\Art\\magical
 medical = { icon = "Interface\\AddOns\\HandyNotes_WarcraftConquest\\Art\\medical.tga", scale = 3.0,};
 stealth = { icon = "Interface\\AddOns\\HandyNotes_WarcraftConquest\\Art\\stealth.tga", scale = 3.0,};
 
+abattle = { icon = "Interface\\AddOns\\HandyNotes_WarcraftConquest\\Art\\abattle.tga", scale = 3.0,};
+areport = { icon = "Interface\\AddOns\\HandyNotes_WarcraftConquest\\Art\\areport.tga", scale = 3.0,};
+ahorror = { icon = "Interface\\AddOns\\HandyNotes_WarcraftConquest\\Art\\ahorror.tga", scale = 3.0,};
+amagical = { icon = "Interface\\AddOns\\HandyNotes_WarcraftConquest\\Art\\amagic.tga", scale = 3.0,};
+astealth = { icon = "Interface\\AddOns\\HandyNotes_WarcraftConquest\\Art\\astealth.tga", scale = 3.0,};
+
+hbattle = { icon = "Interface\\AddOns\\HandyNotes_WarcraftConquest\\Art\\hbattle.tga", scale = 3.0,};
+hreport = { icon = "Interface\\AddOns\\HandyNotes_WarcraftConquest\\Art\\hreport.tga", scale = 3.0,};
+hhorror = { icon = "Interface\\AddOns\\HandyNotes_WarcraftConquest\\Art\\hhorror.tga", scale = 3.0,};
+hmagical = { icon = "Interface\\AddOns\\HandyNotes_WarcraftConquest\\Art\\hmagic.tga", scale = 3.0,};
+hstealth = { icon = "Interface\\AddOns\\HandyNotes_WarcraftConquest\\Art\\hstealth.tga", scale = 3.0,};
+
+acamp = { icon = "Interface\\AddOns\\HandyNotes_WarcraftConquest\\Art\\alliance.tga", scale = 3.0,};
+hcamp = { icon = "Interface\\AddOns\\HandyNotes_WarcraftConquest\\Art\\horde.tga", scale = 3.0,};
+ncamp = { icon = "Interface\\AddOns\\HandyNotes_WarcraftConquest\\Art\\ncamp.tga", scale = 3.0,};
+
 -- City
 supplies = { icon = "Interface\\AddOns\\HandyNotes_WarcraftConquest\\Art\\supplies.tga", scale = 2.00};
 repairs = { icon = "Interface\\AddOns\\HandyNotes_WarcraftConquest\\Art\\repairs.tga", scale = 2.00};
@@ -80,6 +95,7 @@ alchemy = { icon = "Interface\\AddOns\\HandyNotes_WarcraftConquest\\Art\\alchemy
 engineering = { icon = "Interface\\AddOns\\HandyNotes_WarcraftConquest\\Art\\engineering.tga", scale = 2.00};
 barracks = { icon = "Interface\\AddOns\\HandyNotes_WarcraftConquest\\Art\\barracks.tga", scale = 2.00};
 magic = { icon = "Interface\\AddOns\\HandyNotes_WarcraftConquest\\Art\\magic.tga", scale = 2.00};
+food = { icon = "Interface\\AddOns\\HandyNotes_WarcraftConquest\\Art\\food.tga", scale = 2.00};
 
 -- Villain
 skullblood = { icon = "Interface\\AddOns\\HandyNotes_WarcraftConquest\\Art\\skull-blood.tga", scale = 3.0};
