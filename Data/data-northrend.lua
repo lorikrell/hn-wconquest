@@ -31,6 +31,8 @@
             engineering = [boolean], -- ICON
             repairs = [boolean], -- ICON
             mining = [boolean], -- ICON
+            bombs = [boolean], -- ICON
+            stable = [boolean], -- ICON
             alchemy = [boolean], -- ICON
             inn = [boolean], -- ICON
             magic = [boolean], -- ICON
@@ -262,15 +264,15 @@ ns.points[C.ZONES.ICECROWN] = { -- Icecrown
 -- -------------------------------------------------------------------------------------------------------------------
 -- Coalition Locations
 -- -------------------------------------------------------------------------------------------------------------------
-   [86877683] = { label = "Medical",                             medic = true, text = "Medics tents and facilities.", npc = "C'thonia and Syeris", beds = 16,  },
-   [87187537] = { label = "Repairs",                             repairs = true, text = "Smelting and anvils to repair armor, weapons, and more.", },
+   [86997643] = { label = "Medical",                             medic = true, text = "Medics tents and facilities.", npc = "C'thonia and Syeris", beds = 16,  },
+   [86827717] = { label = "Smithing and Supplies",               mining = true, text = "Smelting and anvils to repair armor, weapons, and more.", },
    [86497631] = { label = "Food Carts",                          food = true, text = "Food carts, soup cauldrons, hot meals...sorely needed in the cold.", },
-   [85977721] = { label = "Ballista",                            text = "Two ballista ready to fight", atlas = "Vehicle-Ground-Occupied", scale = 1.50, },
-   [87217913] = { label = "Drakes and stables",                  text = "Stables of drakes and horses ready for battle", atlas = "Vehicle-Ground-Occupied", scale = 1.50, },
-   [79257238] = { label = "Crusader's Pinnacle",                 ncamp = true, text = "Forward position for Neutral forces with tents, a tower, and cannons.", phasing = "Complete quests starting from Tirion Fordring, until the Pinnacle is unlocked.", floors = 2, },
+   [85977721] = { label = "Ballista and Explosives",             bombs = true, text = "Two ballista ready to fight, with bombs and munitions.", },
+   [87217913] = { label = "Drakes and stables",                  stable = true, text = "Stables of drakes and horses ready for battle", },
+   [79257238] = { label = "Crusader's Pinnacle Barracks",        barracks = true, text = "Forward position for scouts, with barracks in tents and a tower, and cannons.", phasing = "Complete quests starting from Tirion Fordring, until the Pinnacle is unlocked.", floors = 2, },
    [90007600] = { label = "Argent Vanguard",                     ncamp = true, text = "Coalition camp for Alliance, Horde, and Neutrals in Icecrown.", phasing = "Complete quests starting from Tirion Fordring.", },
-   [87887789] = { label = "Supplies",                            supplies = true, text = "Wagons, crates, stores for the camp.", },
-
+   [87887789] = { label = "Repairs and Supplies",                repairs = true, text = "Wagons, crates, stores for the camp. An area to repair wagons, carts, and units.", },
+   [87237561] = { label = "Engineering and Supplies",            engineering = true, text = "Various wares, metals, essences, and elements are collected around tools for engineering, fletching, and gunneries.", },
 --   [44622051] = { label = "The Shadow Vault",                    vault = true, text = "Claimed by the Ebon Blade, the chambers provide sancturary and a battle front for the death knights of Icecrown. It holds runeforges, goods, and a base.", npc = "Baron Silver",  },
 
 -- -------------------------------------------------------------------------------------------------------------------
