@@ -139,32 +139,34 @@ ns.points[C.ZONES.DRAGONBLIGHT] = { -- Dragonblight
 -- sunday 20th
    [59606894] = { label = "Scouting the Shore",                 abattle = true, npc = "Marevra", text = "The Alliance begins to scout the path forward, but what rests between their landing and Icecrown?", eventtype = "Battle", attendee = "Any", schedule = "Sunday, Sept 20th", aevent = true, },
    [82016843] = { label = "Forgotten Memories",                 abattle = true, npc = "Zaria", text = "The heroes of the Alliance make landfall upon the Forgotten Shore. Their first enemy? The restless souls of the past are disturbed by Scourge meddling. Undo them.", eventtype = "Battle", attendee = 40, schedule = "Sunday, Sept 20th", aevent = true, },    
-   [82907952] = { label = "Landing on the Forgotten Shore",     naval = true, npc = "Vehicle Battle Team", text = "The Alliance, Horde, and what remains of the Argent Crusade shall land on the Forgotten Shore in order to relieve those fighting the scourge in Dragonblight. The ghosts of Arthas’ betrayal linger here among the dead.", eventtype = "Vehicle, Discord", attendee = 30, schedule = "Sunday, Sept 20th", nevent = true, },
+   [82907952] = { label = "Landing on the Forgotten Shore",     naval = true, npc = "Vehicle Battle Team", proxy = "The battle occurs in Discord.", text = "The Alliance, Horde, and what remains of the Argent Crusade shall land on the Forgotten Shore in order to relieve those fighting the scourge in Dragonblight. The ghosts of Arthas’ betrayal linger here among the dead.", eventtype = "Vehicle, Discord", attendee = 30, schedule = "Sunday, Sept 20th", nevent = true, },
    [49027442] = { label = "Moa'ki Diplomacy",                   hbattle = true, npc = "Virsandir", text = "The path to Agmar’s Hammer is already occupied by the Tuskarr of Moa’ki Harbor. It’s up to the Horde to secure the harbor and a path from the sea to the base, whether by blade or words.", eventtype = "Battle, Diplomacy", attendee = "Any", schedule = "Sunday, Sept 20th", hevent = true, },
 -- monday 21st
    [55434416] = { label = "The Risen Onslaught",               abattle = true, npc = "Altrek", text = "As the Alliance sends patrols out into Dragonblight to get a feel of the land they come across another patrol, their members garbed in red. Are they allies...or are they foes?", eventtype = "Battle, Scouting", attendee = "10-15", schedule = "Monday, Sept 21st", aevent = true, },
-   [53463805] = { label = "Scouting the Shore",                hreport = true, npc = "Ithric", text = "The Horde begins to scout the path forward, but what rests between their Agmar’s Hammer and Icecrown?", eventtype = "Scouting", attendee = "Any", schedule = "Monday, Sept 21st", hevent = true, },
+   [53463805] = { label = "Scouting the Shore",                hreport = true, npc = "Ithric", proxy = "This is a proxy for the shoreline to investigate.", text = "The Horde begins to scout the path forward, but what rests between their Agmar’s Hammer and Icecrown?", eventtype = "Scouting", attendee = "Any", schedule = "Monday, Sept 21st", hevent = true, },
    [79107140] = { label = "The Restless Dead, Awaken...",      horror = true, npc = "Tyrinade", text = "The Souls of the restless First Legion will never find peace, their souls cursed to wander the wastes for ever. Our enemies seek to steal those souls for themselves. We must stop them from claiming the anguished and either put them to rest or claim them for ourselves.", eventtype = "Battle, Magic, Horror", attendee = 20, schedule = "Monday, Sept 21st", nevent = true, },
 -- tuesday 22nd
    [25744860] = { label = "Old Allies",                        ahorror = true, npc = "Vince", text = "Many years have passed since the reign of Arthas and the true fate of the living Nerubian resistance remains a mystery, what is clear is that they failed to fully quell the might of their fallen Anub'ar kin. Seeking to close the Nerubian tunnel network beneath Dragonblight, an Alliance force will enter the catacombs to plant explosive charges and attempt to uncover the fate of the Azjol-anak. ", eventtype = "Battle, Horror, Diplomacy", attendee = "10-20", schedule = "Tuesday, Sept 22nd", aevent = true, },
-   [68104688] = { label = "Ride for JUSTICE!",                 abattle = true, npc = "Hildira", text = "The Scourge march on our position, streaming through the Crystal Vice! Led by the knights of the Silver Hand, Alliance cavalry must mount up and ride from Wintergarde to face their forces head-on. Destroy the vile undead, for JUSTICE!", eventtype = "War", attendee = 40, schedule = "Tuesday, Sept 22nd", aevent = true, },
+   [70004450] = { label = "Ride for JUSTICE!",                 abattle = true, npc = "Hildira", text = "The Scourge march on our position, streaming through the Crystal Vice! Led by the knights of the Silver Hand, Alliance cavalry must mount up and ride from Wintergarde to face their forces head-on. Destroy the vile undead, for JUSTICE!", eventtype = "War", attendee = 40, schedule = "Tuesday, Sept 22nd", aevent = true, },
    [62201930] = { label = "Battle for the Crystal Vice",       abattle = true, npc = "Marevra", text = "The Scourge marches on the Crystal Vice. The forces of the Alliance move to meet them at the frozen wasteland and quash the undead before they can overrun the coalition positions!", eventtype = "War", attendee = "Any", schedule = "Tuesday, Sept 22nd", aevent = true, },
    [66402420] = { label = "Let the Hammer Fall",               hbattle = true, npc = "Virsandir", text = "Whilst the Alliance fights the infantry on the ground, the Horde takes to the air! Launching from Agmar’s Hammer, they’ll be taking out objectives to secure the ground army’s safe passage through to Crystalsong Forest.", eventtype = "Aerial Combat", attendee = "Any", schedule = "Tuesday, Sept 22nd", hevent = true, },
    [74407300] = { label = "Warriors of the Spirit Realm",      hbattle = true, npc = "Gotosh", text = "Struck with a horrible vision of the near future, a shaman reaches out to his allies. Souls are being abused by a fanatical band of Loyalists seeking to harm the spirit plane as well as the physical one. Band together with your fellow Horde in stopping this ritual before it’s too late. However, it seems you may not just be facing the Loyalists...but the very spirits themselves.", eventtype = "Spiritual, Battle", attendee = "10-15", schedule = "Tuesday, Sept 22nd", hevent = true, },
-   [63402070] = { label = "Stronger Together",                 battle = true, npc = "Zaria", text = "The forces of the Alliance and Horde band together to stop the flow of enemies pouring out from the vice. The heroes venture across the lip of the vice to bring down ice and snow on the Scourge from above the canyon.", eventtype = "Battle", attendee = 40, schedule = "Tuesday, Sept 22nd", nevent = true, },
-   [62703000] = { label = "Battle for the Crystal Vice",       tank = true, npc = "Vehicle Battle Team", text = "Undead spew from the Crystal Vice, swarming across Dragonblight. The Alliance, Horde, and Argent Crusade must stem the tide, bringing their armored vehicles to bear upon the Scourge.", eventtype = "Vehicle, Discord", attendee = 30, schedule = "Sunday, Sept 20th", nevent = true, },
+   [63802350] = { label = "Stronger Together",                 battle = true, npc = "Zaria", text = "The forces of the Alliance and Horde band together to stop the flow of enemies pouring out from the vice. The heroes venture across the lip of the vice to bring down ice and snow on the Scourge from above the canyon.", eventtype = "Battle", attendee = 40, schedule = "Tuesday, Sept 22nd", nevent = true, },
+   [62703000] = { label = "Battle for the Crystal Vice",       tank = true, npc = "Vehicle Battle Team", proxy = "The battle occurs in Discord.", text = "Undead spew from the Crystal Vice, swarming across Dragonblight. The Alliance, Horde, and Argent Crusade must stem the tide, bringing their armored vehicles to bear upon the Scourge.", eventtype = "Vehicle, Discord", attendee = 30, schedule = "Sunday, Sept 20th", nevent = true, },
 -- wednesday 23rd
    [47204880] = { label = "Choosing a Path", amagical = true, npc = "Lyraeni", text = "At the call of the Wyrmrest Guardians, soldiers of the Alliance are called to defend the Ruby Dragonshrine from the encroaching scourge, and gain their favour in return!", eventtype = "Battle, Magic", attendee = 15, schedule = "Wednesday, Sept 23rd", aevent = true, },
    [73952421] = { label = "Trying to Protect You, From It", horror = true, npc = "Tyrinade", text = "Once the Prince took up the cursed blade his fate was sealed, the site now stands as a testament to that fateful moment. The Revenants stir once more and have begun raging throughout the cavern. It falls upon the keepers of the dead to stem their rampage and secure the location before the Cult of the Damned can take it.", eventtype = "Horror", attendee = 10, schedule = "Wednesday, Sept 23rd", nevent = true, },
 -- thursday 24th
    [67685192] = { label = "Armaments of the Dragons", abattle = true, npc = "Lyraeni", text = "With the Dragonshrine saved, the Cult sets its eyes on the great wyrm within the Mirror of Dawn. Keep the scourge from claiming its corpse, and receive further gifts from your Draconic Patrons.", eventtype = "Battle", attendee = 15, schedule = "Thursday, Sept 24th", aevent = true, },
    [81605064] = { label = "Cultmasters", amagical = true, npc = "Wardom", text = "You have sensed it for days now, an unease around certain individuals in the camp. You do not remember their faces, for they are not your allies. The Cult of the Damned has always been known to hide in plain sight. The suspicious characters have had their movements tracked to Wintergarde Mausoleum, where they plot beneath our very feet. It does not matter what they scheme, only that you put an end to it.", eventtype = "Magic, Battle", attendee = 10, schedule = "Thursday, Sept 24th", aevent = true, },
-   [71577252] = { label = "Bleeding Scarlet", battle = true, npc = "Keirras, Mokron", text = "A lead has been given, alerting of a Scourge presence within New Hearthglen, suggesting that the bodies of Scarlet Crusaders are being raised to serve the undead ranks by an unknown source. Band together, and bring your strength and wits, to strike at the heart of the dark power source directly!", eventtype = "Battle", attendee = 25, schedule = "Thursday, Sept 24th", hevent = true, },
+   [71577252] = { label = "Bleeding Scarlet", hbattle = true, npc = "Keirras, Mokron", text = "A lead has been given, alerting of a Scourge presence within New Hearthglen, suggesting that the bodies of Scarlet Crusaders are being raised to serve the undead ranks by an unknown source. Band together, and bring your strength and wits, to strike at the heart of the dark power source directly!", eventtype = "Battle", attendee = 25, schedule = "Thursday, Sept 24th", hevent = true, },
 -- friday 25th
    [88704430] = { label = "The Spider's Den", ahorror = true, npc = "Vince", text = "Following up on the information gained during the expedition in the tunnels of Azjol Nerub, an Alliance force will enter Naxxramas and head into the spider wing to destroy the Broodmother of the Anub’ar and her attendants, cutting the Anub’ar off from any future reinforcements while extracting what information they can from her.", eventtype = "Battle, Horror", attendee = "10-20", schedule = "Friday, Sept 25th", aevent = true, },
-   [27004900] = { label = "Battle of the Az'jol Deeps", tank = true, npc = "Vehicle Battle Team", text = "In order to fully relieve the Azjol-anak so that they might aid the coalition, the Alliance, Horde, and Argent Crusade must delve into the Az’jol Deeps to contend with the remaining undead Nerubians. Mole machines will lead the charge into the depths where unliving horrors await.", eventtype = "Vehicle, Discord", attendee = 30, schedule = "Friday, Sept 25th", nevent = true, },
+   [28005000] = { label = "Battle of the Az'jol Deeps", tank = true, npc = "Vehicle Battle Team", proxy = "The battle occurs in Discord.", text = "In order to fully relieve the Azjol-anak so that they might aid the coalition, the Alliance, Horde, and Argent Crusade must delve into the Az’jol Deeps to contend with the remaining undead Nerubians. Mole machines will lead the charge into the depths where unliving horrors await.", eventtype = "Vehicle, Discord", attendee = 30, schedule = "Friday, Sept 25th", nevent = true, },
 -- saturday 26th
-   [47008100] = { label = "Power of the Flights", amagical = true, npc = "Lyraeni", text = "While we stopped the initial ritual, the Lich has retreated to the cult-infested tunnels of the Obsidian Dragonshrine. Carve a path through that hellish cavern, and put a stop to his blasphemous defilement of the Dragons.", eventtype = "Battle, Magic", attendee = 15, schedule = "Saturday, Sept 26th", aevent = true, },
+   [36003200] = { label = "Power of the Flights", amagical = true, npc = "Lyraeni", text = "While we stopped the initial ritual, the Lich has retreated to the cult-infested tunnels of the Obsidian Dragonshrine. Carve a path through that hellish cavern, and put a stop to his blasphemous defilement of the Dragons.", eventtype = "Battle, Magic", attendee = 15, schedule = "Saturday, Sept 26th", aevent = true, },
+-- tuesday 29th
+   [27004500] = { label = "The Repository of the Vile", magical = true, npc = "Straita", proxy = "This is a proxy for under Icecrown.", text = "At the new Lich King’s command, the many liches of the Scourge were forced to dredge up their phylacteries and store them in a hidden vault deep within Icecrown Glacier, a means of keeping the liches vulnerable should they ever conspire to return the Scourge to its former glory. Now, many powers conspire to gain control of the repository, and all the lich souls contained within.", eventtype = "Battle, Magic, War", attendee = 25, schedule = "Tuesday, Sept 29th", nevent = true, },
 
 -- -------------------------------------------------------------------------------------------------------------------
 -- Neutral Locations
@@ -239,6 +241,23 @@ ns.points[C.ZONES.ICECROWN] = { -- Icecrown
 -- saturday 26th
    [55007700] = { label = "Checkmate", ahorror = true, npc = "Vince", text = "Nowhere left to run, nowhere left to hide. Having tracked down and cornered the Cryptking and his elite guards beneath Icecrown Citadel, the Alliance forces will attempt to put an end to his reign once and for all, freeing the Azjol’anak from his tyranny and securing them as an ally in the battles to come.", eventtype = "Battle, Horror", attendee = "10-25", schedule = "Sunday, Sept 20th", aevent = true, phasing = "Complete Icecrown questing.", },
    [48006900] = { label = "Matters of the Soul", amagical = true, npc = "Wardom", proxy = "Corp'rethar is a proxy for the Wrathgate.", text = "Some sort of beacon at the border of Icecrown has been drawing in the souls of the dead. The spirits of the slain howl in the wind as they are forced towards some unknown purpose. Our enemies must be denied at every turn. Eliminate the cause and try not to lose your skin doing it.", eventtype = "Battle, Magic", attendee = 10, schedule = "Saturday, Sept 26th", aevent = true, },
+   [50002900] = { label = "Collecting the Keys, Part 2", hstealth = true, npc = "Ithric", text = "In order to defeat the Scourge, the gates throughout Icecrown must be opened. Kill the Gatekeepers or steal their keys!", eventtype = "Battle, Stealth", attendee = "Any", schedule = "Sunday, Sept 20th", aevent = true, },
+-- monday 28th
+   [70003850] = { label = "Life Withdrawn", amagical = true, npc = "Wardom", proxy = "This is a proxy for Pit of Saron.", text = "Once again, souls are being drawn to a distant focus. This time, with even greater severity. The Cult of the Damned must be destroyed before they can guide their masters to the mortal plane. You can’t shake the feeling that your interference is expected.", eventtype = "Battle, Magic", attendee = 10, schedule = "Monday, Sept 28th", aevent = true, },
+   [83007100] = { label = "Reclaim the Vanguard", abattle = true, npc = "Zaria", text = "The forces of the Alliance stand together to reclaim the starting point to the Crusade’s first push on Icecrown many years, ago - the Argent Vanguard is overwhelmed! Aid the Argents in clearing out the swarm.", eventtype = "Battle", attendee = 40, schedule = "Monday, Sept 28th", aevent = true, },
+   [80356585] = { label = "Infiltrating Scourgeholme", astealth = true, npc = "Alverdo", phasing = "Complete Argent Vanguard and Crusader Pinnacle quests to unlock.", text = "Infiltrating the heart of Scourgeholme to execute key figures that lead the Undead as they once more lead a heavy assault against the Vanguard. Will the Alliance prevail in taking out the hierarchy?", eventtype = "Stealth, Battle", attendee = 15, schedule = "Monday, Sept 28th", aevent = true, },
+   [78346498] = { label = "The Scourge Gathers", abattle = true, npc = "Vanidicus, Nathul", phasing = "Complete Argent Vanguard and Crusader Pinnacle quests to unlock.", proxy = "This location is a proxy for an unnamed scourge vault.", text = "The unleashed Scourge moves ever southward. As it moves it gains strength from feral undead flocking to the horde, and from the exultations of Death provoked by the Cult of the Damned. Using the gathering swarm as a cover, the cult of the damned is setting up dread weapons once made and placed by the Lich Kings of old. Can they be eliminated in time?", eventtype = "Battle", attendee = 20, schedule = "Monday, Sept 28th", aevent = true, },
+   [64566043] = { label = "Enemies at the Gates, Part 1", hbattle = true, npc = "Ithric", text = "We have collected the keys, now we must clear the way and open the gates!", eventtype = "Battle", attendee = "Any", schedule = "Monday, Sept 28th", hevent = true, },
+   [52003000] = { label = "Cleave to the Shadow", hstealth = true, npc = "Mordrime", text = "While the Scourge’s main focus lies on the renewed offensive in southern Icecrown, a strike team has been tasked with slipping behind their lines to sabotage the Desolation Gate’s garrison. The hope is to put every cultist there to the sword, and to sabotage any rituals, concoctions, or other strategically important objects the Cult of the Damned has created. Caution is advised however, for there are reports that one of the cult’s new leaders may be commanding the garrison...", eventtype = "Battle, Stealth", attendee = "Any", schedule = "Monday, Sept 28th", hevent = true, },
+   [86506820] = { label = "The Battle for Scourgeholme", tank = true, npc = "Vehicle Battle Team", proxy = "The battle occurs in Discord.", text = "If the coalition is to have any hope of advancing on Icecrown Citadel, its tanks and artillery must first breach the walls and ramparts surrounding it. The Argent Vanguard will serve as the staging ground for the push into Icecrown.", eventtype = "Vehicle, Battle", attendee = 30, schedule = "Sunday, Sept 20th", nevent = true, },
+-- tuesday 29th
+   [77907380] = { label = "The Scourge Onslaught", abattle = true, npc = "Vandicus, Nathul", phasing = "Complete Argent Vanguard and Crusader Pinnacle quests to unlock.", text = "The maddened knights of a dead king come for the living. Survive.", eventtype = "Battle", attendee = 20, schedule = "Tuesday, Sept 29th", aevent = true, },
+   [78003790] = { label = "In the Clutch", abattle = true, npc = "Zaria", text = "As the war machine presses on to Aldur’thar, the Alliance move towards the battles flank to keep the clutches of unruly frost drakes and their Necromancers controlling them at bay. ", eventtype = "Battle", attendee = 40, schedule = "Tuesday, Sept 29th", aevent = true, },
+   [54002900] = { label = "Enemies at the Gate, Part 2", hbattle = true, npc = "Ithric", text = "We have collected the keys, now we must clear the way and open the gates!", eventtype = "Battle", attendee = "Any", schedule = "Tuesday, Sept 29th", hevent = true, },
+   [44622051] = { label = "My Brother, My Traitor", stealth = true, npc = "Mordrime", phasing = "Complete Shadow Vault quests to unlock.", text = "Fresh intel reports that the Shadow Vault has been converted into a “reeducation” complex for death knights loyal to the Ebon Blade. Command has authorized a rescue operation, as much to recover vital intel and deny the Scourge elite forces as it is an errand of mercy. Several methods to infiltrate the fortress have been considered, but getting out may be another problem.", eventtype = "Battle, Stealth", attendee = "Any", schedule = "Sunday, Sept 20th", nevent = true, },
+   [55604000] = { label = "The Battle for Aldur'thar", tank = true, npc = "Vehicle Battle Team", proxy = "The battle occurs in Discord.", text = "Aldur’thar, the Desolation Gate, stands as one of the final barriers to Icecrown Citadel. The coalition must seize it with all the firepower they have.", eventtype = "Vehicle, Battle", attendee = 30, schedule = "Sunday, Sept 20th", nevent = true, },
+-- wednesday 30th
+   [50007700] = { label = "The Siege of Icecrown", battle = true, npc = "Thaugrim Lead Tactician", phasing = "We recommend completing Icecrown quests.", text = "It has all led to this. Our best hopes of securing Northrend are in securing Icecrown Citadel itself. All Coalition forces rally as one to break the greatest bastion of Scourge defense on the continent. Our objective: barricade the Citadel gates and claim all grounds around it.", eventtype = "Final War", attendee = "Special", schedule = "Wednesday, Sept 30th", nevent = true, },
 
 -- -------------------------------------------------------------------------------------------------------------------
 -- Coalition Locations
@@ -249,38 +268,38 @@ ns.points[C.ZONES.ICECROWN] = { -- Icecrown
    [85977721] = { label = "Ballista",                            text = "Two ballista ready to fight", atlas = "Vehicle-Ground-Occupied", scale = 1.50, },
    [87217913] = { label = "Drakes and stables",                  text = "Stables of drakes and horses ready for battle", atlas = "Vehicle-Ground-Occupied", scale = 1.50, },
    [79257238] = { label = "Crusader's Pinnacle",                 ncamp = true, text = "Forward position for Neutral forces with tents, a tower, and cannons.", phasing = "Complete quests starting from Tirion Fordring, until the Pinnacle is unlocked.", floors = 2, },
-   [87747938] = { label = "Argent Vanguard",                     ncamp = true, text = "Coalition camp for Alliance, Horde, and Neutrals in Icecrown.", phasing = "Complete quests starting from Tirion Fordring.", },
+   [90007600] = { label = "Argent Vanguard",                     ncamp = true, text = "Coalition camp for Alliance, Horde, and Neutrals in Icecrown.", phasing = "Complete quests starting from Tirion Fordring.", },
    [87887789] = { label = "Supplies",                            supplies = true, text = "Wagons, crates, stores for the camp.", },
 
-   [44622051] = { label = "The Shadow Vault",                    vault = true, text = "Claimed by the Ebon Blade, the chambers provide sancturary and a battle front for the death knights of Icecrown. It holds runeforges, goods, and a base.", npc = "Baron Silver",  },
+--   [44622051] = { label = "The Shadow Vault",                    vault = true, text = "Claimed by the Ebon Blade, the chambers provide sancturary and a battle front for the death knights of Icecrown. It holds runeforges, goods, and a base.", npc = "Baron Silver",  },
 
 -- -------------------------------------------------------------------------------------------------------------------
 -- Villain Locations
 -- -------------------------------------------------------------------------------------------------------------------
-   [80086118] = { label = "Scourgeholme Temple",                 skull = true, text = "Ziggeraut of death, with a large chamber for a boss or event", phasing = "Argent Crusade quests phase this area.", },
-   [77296190] = { label = "Scourgeholme Chamber",                skull = true, text = "Grand chamber of the scourge, with a large chamber for a boss or event", phasing = "Argent Crusade quests phase this area.", },
-   [79306418] = { label = "Scourgeholme Priest",                 skull = true, text = "Single chamber with a death priest", phasing = "Argent Crusade quests phase this area.", },
-   [77286810] = { label = "Scourgeholme Priest",                 skull = true, text = "Single chamber with a death priest", phasing = "Argent Crusade quests phase this area.", },
+--   [80086118] = { label = "Scourgeholme Temple",                 skull = true, text = "Ziggeraut of death, with a large chamber for a boss or event", phasing = "Argent Crusade quests phase this area.", },
+--   [77296190] = { label = "Scourgeholme Chamber",                skull = true, text = "Grand chamber of the scourge, with a large chamber for a boss or event", phasing = "Argent Crusade quests phase this area.", },
+--   [79306418] = { label = "Scourgeholme Priest",                 skull = true, text = "Single chamber with a death priest", phasing = "Argent Crusade quests phase this area.", },
+--   [77286810] = { label = "Scourgeholme Priest",                 skull = true, text = "Single chamber with a death priest", phasing = "Argent Crusade quests phase this area.", },
 
-   [77446526] = { label = "Scourgeholme Altar",                  skull = true, text = "Summoning altar of the scourge", atlas = "ArtifactsFX-Whirls-Purple", scale = 1.75, phasing = "Argent Crusade quests phase this area.", },
-   [77446528] = { label = "Scourgeholme Altar",                  skull = true, text = "Summoning altar of the scourge", atlas = "Rune-06-purple", scale = 1.50, phasing = "Argent Crusade quests phase this area.", },
+--   [77446526] = { label = "Scourgeholme Altar",                  skull = true, text = "Summoning altar of the scourge", atlas = "ArtifactsFX-Whirls-Purple", scale = 1.75, phasing = "Argent Crusade quests phase this area.", },
+--   [77446528] = { label = "Scourgeholme Altar",                  skull = true, text = "Summoning altar of the scourge", atlas = "Rune-06-purple", scale = 1.50, phasing = "Argent Crusade quests phase this area.", },
 
 --   [62706203] = { label = "Mord'rethar: The Death Gate",         skullvoid = true, text = "Grand chamber of death, plague, and corpse machines. It stands as the first line of Scourage power and defense.",  },
 --   [43387837] = { label = "Cathedral of Darkness",               skullblood = true, text = "A terrifying cathedral of blood sacrifice and chosen zealots offering faith to the night.", npc = " High Invoker Basaleph", },
-   [54143045] = { label = "Dark Summoning Circle",               skullfel = true, text = "Mass summoning circle of darkness, surrounded by channelers and summoners.",  },
-   [49303374] = { label = "Dark Plague and Alchemists",          skullfel = true, text = "Plague cauldrons, alchemists, and dark apothecaries toil endlessly.", },
-   [51942875] = { label = "Aldur'thar: The Desolation Gate",     skullshadow = true, text = "Grand altars and sacrifices, surrounded by shadow channelers, researchers, and libraries", },
+--   [54143045] = { label = "Dark Summoning Circle",               skullfel = true, text = "Mass summoning circle of darkness, surrounded by channelers and summoners.",  },
+--   [49303374] = { label = "Dark Plague and Alchemists",          skullfel = true, text = "Plague cauldrons, alchemists, and dark apothecaries toil endlessly.", },
+--   [51942875] = { label = "Aldur'thar: The Desolation Gate",     skullshadow = true, text = "Grand altars and sacrifices, surrounded by shadow channelers, researchers, and libraries", },
 
-   [61502303] = { label = "The Black Knight",                    knight = true, text = "The cults seek to regain one of their champions clad in blackened armor.", },
+--   [61502303] = { label = "The Black Knight",                    knight = true, text = "The cults seek to regain one of their champions clad in blackened armor.", },
 
-   [61432035] = { label = "Deathspeaker's Watch",                skull = true, text = "The Cult of the Damned gather, pray, and practice their dark arts. Prisoners wallow in cages, awaiting their turn upon the pyres.", atlas = "ArtifactsFX-Whirls-Purple", scale = 1.75,},
-   [61432033] = { label = "Deathspeaker's Watch",                skull = true, text = "The Cult of the Damned gather, pray, and practice their dark arts. Prisoners wallow in cages, awaiting their turn upon the pyres.", atlas = "Rune-06-purple", scale = 1.50,},
+--   [61432035] = { label = "Deathspeaker's Watch",                skull = true, text = "The Cult of the Damned gather, pray, and practice their dark arts. Prisoners wallow in cages, awaiting their turn upon the pyres.", atlas = "ArtifactsFX-Whirls-Purple", scale = 1.75,},
+--   [61432033] = { label = "Deathspeaker's Watch",                skull = true, text = "The Cult of the Damned gather, pray, and practice their dark arts. Prisoners wallow in cages, awaiting their turn upon the pyres.", atlas = "Rune-06-purple", scale = 1.50,},
 
-   [38843921] = { label = "Weeping Quarry",                      mining = true, text = "Saronite and stone mining manned by the Scourge. They have dug deep, perhaps too far.", },
+--   [38843921] = { label = "Weeping Quarry",                      mining = true, text = "Saronite and stone mining manned by the Scourge. They have dug deep, perhaps too far.", },
 
-   [33776897] = { label = "The Fleshwerks",                      skullblood = true, text = "The Scourge use this large facility to craft Abominations and Flesh Giants.", phasing = "He's Gone to Pieces quest puts this in a phase. Blackwatch quest hub.", },
+--   [33776897] = { label = "The Fleshwerks",                      skullblood = true, text = "The Scourge use this large facility to craft Abominations and Flesh Giants.", phasing = "He's Gone to Pieces quest puts this in a phase. Blackwatch quest hub.", },
 
-   [36786779] = { label = "Sanctum of Reanimation",              skull = true, text = "In the depths of a cave, labratories and altars knit together the dead.", phasing = "He's Gone to Pieces quest puts this in a phase. Blackwatch quest hub.", },
+--   [36786779] = { label = "Sanctum of Reanimation",              skull = true, text = "In the depths of a cave, labratories and altars knit together the dead.", phasing = "He's Gone to Pieces quest puts this in a phase. Blackwatch quest hub.", },
 }; -- Icecrown
 -- -------------------------------------------------------------------------------------------------------------------
 ns.points[C.ZONES.BOREANTUNDRA] = { -- Borean Tundra
@@ -295,30 +314,31 @@ ns.points[C.ZONES.BOREANTUNDRA] = { -- Borean Tundra
    [64001800] = { label = "Borean Battlebot Beatdown", areport = true, npc = "Wey-Chung, Bakazun", text = "A super-powered strain of the Plague threatens to escape from a nightmarish lab established in the crashed necropolis of Talramas. Such a foul sickness can't be confronted head-on, and materials can’t be spared in the march on Icecrown - a contingent of the Alliance will have to construct and pilot bots of recovered scrap from the Geyser Fields in order to battle its fiendish creator! You need a Blue Crashin' Thrashin' Racer Controller from Stormwind.", eventtype = "Scouting, Battle", attendee = "15-20", schedule = "Thursday, Sept 24th", aevent = true, },
    [31002700] = { label = "On Scaled Wings", amagical = true, npc = "Lyraeni", text = "A powerful Lich has been spotted above the Nexus, harnessing its energies for an unknown ritual. Fight alongside the brood of your patrons, take the fight to him, and stop his ritual before he gathers enough ley energies for his dark task.", eventtype = "Battle, Magic", attendee = 15, schedule = "Friday, Sept 25th", aevent = true, },
    [85002400] = { label = "The Sleeper Awakens", horror = true, npc = "Tyrinade", text = "One location identified by the Blood Princess Tyrinade as being the site of several dangerous San’layn artifacts; Blood Orbs, San’layn Weapons, and Nerubian tokens. Items of such dangerous power must not be allowed into the hands of our enemies. We shall claim them for ourselves and direct their vampiric wrath against those standing against us.", eventtype = "Battle, Horror, Magic", attendee = 20, schedule = "Friday, Sept 25th", nevent = true, },
+   [90002950] = { label = "Mother Must Die", horror = true, npc = "Tyrinade", proxy = "The Naxxanar ziggurat is a proxy for Icecrown.", text = "The Cult of the Damned has brought back many of the Fallen masters of Icecrown. Lana’Thel strikes home for many of the San’layn who have escaped and built new lives for themselves. The Coalition must remove Lana’Thel from the picture as she represents a massive threat to us all, for the San’layn…. Mother Must Die...", eventtype = "Battle, horror, magic", attendee = 15, schedule = "Saturday, Sept 26th", nevent = true, },
 
 -- -------------------------------------------------------------------------------------------------------------------
 -- Alliance Locations
 -- -------------------------------------------------------------------------------------------------------------------
-   [56707150] = { label = "Valiance Keep",                       astronghold = true, floors = 3, seats = 7, tables = 2, maxseats = 4, text = "Alliance war headquarters with meeting hall, brig, and dock.", },
-   [58527000] = { label = "Valiant Rest",                        inn = true, floors = 3, seats = 8, beds = 4, tables = 5, maxseats = 3, text = "Inn with a bar, kitchen, and beds.", },
-   [57256648] = { label = "Strongstout Smithy",                  repairs = true, trainer = "Blacksmithing", npc = "Argo Strongstout", text = "Repairs for armor, weapons, and more.", },
-   [58246613] = { label = "Practice Yard",                       alliance = true, atlas = "worldquest-icon-pvp-ffa", scale = 1.10, text = "Practice yards for melee and ranged.", },
-   [60416984] = { label = "Valiant Docks",                       docks = true, text = "Alliance docks and harbor.", },
-   [57555913] = { label = "Farshire",                            alliance = true, atlas = "GarrBuilding_TownHall_2_A_Info", scale = 2.00, text = "Townhall, lighthouse, farms, and mines to aid the Alliance.", seats = 3, floors = 2, },
-   [57501901] = { label = "Fizzcrank Airstrip",                  text = "Alliance engineering corps and airstrip.", atlas = "GarrBuilding_Workshop_1_A_Info", scale = 2.0, },
-   [56452001] = { label = "Chief Engineer Galpen Rolltie",       engineering = true, trainer = "Engineering",  text = "Master chief of engineering", },
+--   [56707150] = { label = "Valiance Keep",                       astronghold = true, floors = 3, seats = 7, tables = 2, maxseats = 4, text = "Alliance war headquarters with meeting hall, brig, and dock.", },
+--   [58527000] = { label = "Valiant Rest",                        inn = true, floors = 3, seats = 8, beds = 4, tables = 5, maxseats = 3, text = "Inn with a bar, kitchen, and beds.", },
+--   [57256648] = { label = "Strongstout Smithy",                  repairs = true, trainer = "Blacksmithing", npc = "Argo Strongstout", text = "Repairs for armor, weapons, and more.", },
+--   [58246613] = { label = "Practice Yard",                       alliance = true, atlas = "worldquest-icon-pvp-ffa", scale = 1.10, text = "Practice yards for melee and ranged.", },
+--   [60416984] = { label = "Valiant Docks",                       docks = true, text = "Alliance docks and harbor.", },
+--   [57555913] = { label = "Farshire",                            alliance = true, atlas = "GarrBuilding_TownHall_2_A_Info", scale = 2.00, text = "Townhall, lighthouse, farms, and mines to aid the Alliance.", seats = 3, floors = 2, },
+--   [57501901] = { label = "Fizzcrank Airstrip",                  text = "Alliance engineering corps and airstrip.", atlas = "GarrBuilding_Workshop_1_A_Info", scale = 2.0, },
+--  [56452001] = { label = "Chief Engineer Galpen Rolltie",       engineering = true, trainer = "Engineering",  text = "Master chief of engineering", },
 
 -- -------------------------------------------------------------------------------------------------------------------
 -- Horde Locations
 -- -------------------------------------------------------------------------------------------------------------------
-   [40305190] = { label = "Warsong Hold",                        hstronghold = true, floors = 3, text = "Horde headquarters with war hall, brig, and zepplin", },
-   [42625294] = { label = "Warsong Engineering Bay",             engineering = true, npc = "Chief Engineer Leveny", text = "Metalworking, engineering, and bombs, lower floor of Warsong Hold.", },
-   [41005557] = { label = "Warsong Smithy",                      repairs = true, trainer = "Blacksmithing", npc = "Armorer Orkuruk", text = "Repairs for armor, weapons, and more", },
-   [40185510] = { label = "Warsong Stables",                     horde = true, npc = "Durkot Wolfbrother",  atlas = "WildBattlePet",  scale = 1.1, text = "Worgs for the Horde", },
-   [49531027] = { label = "Bor'gorok Outpost",                   horde = true, text = "Horde outpost with provisions and wolf riders", atlas = "GarrBuilding_TownHall_2_H_Info", scale = 2.0, },
-   [75783680] = { label = "Taunka'le Village",                   horde = true, text = "Taunka village with a central, stable, shaman, and druid halls.", npc = "Chieftain Wintergale", atlas = "GarrBuilding_MageTower_2_H_Info", scale = 2.00, },
-   [77593680] = { label = "Druid Hall",                          horde = true, text = "Druid hall", npc = "Greatmother Taiga", atlas = "groupfinder-icon-class-druid", scale = 1.40,},
-   [77383915] = { label = "Shaman Hall",                         horde = true, text = "Shaman hall of elements", npc = "Sage of Earth and Sky", atlas = "groupfinder-icon-class-shaman",  scale = 1.40, },
+--   [40305190] = { label = "Warsong Hold",                        hstronghold = true, floors = 3, text = "Horde headquarters with war hall, brig, and zepplin", },
+--   [42625294] = { label = "Warsong Engineering Bay",             engineering = true, npc = "Chief Engineer Leveny", text = "Metalworking, engineering, and bombs, lower floor of Warsong Hold.", },
+--   [41005557] = { label = "Warsong Smithy",                      repairs = true, trainer = "Blacksmithing", npc = "Armorer Orkuruk", text = "Repairs for armor, weapons, and more", },
+--   [40185510] = { label = "Warsong Stables",                     horde = true, npc = "Durkot Wolfbrother",  atlas = "WildBattlePet",  scale = 1.1, text = "Worgs for the Horde", },
+--   [49531027] = { label = "Bor'gorok Outpost",                   horde = true, text = "Horde outpost with provisions and wolf riders", atlas = "GarrBuilding_TownHall_2_H_Info", scale = 2.0, },
+--   [75783680] = { label = "Taunka'le Village",                   horde = true, text = "Taunka village with a central, stable, shaman, and druid halls.", npc = "Chieftain Wintergale", atlas = "GarrBuilding_MageTower_2_H_Info", scale = 2.00, },
+--   [77593680] = { label = "Druid Hall",                          horde = true, text = "Druid hall", npc = "Greatmother Taiga", atlas = "groupfinder-icon-class-druid", scale = 1.40,},
+--   [77383915] = { label = "Shaman Hall",                         horde = true, text = "Shaman hall of elements", npc = "Sage of Earth and Sky", atlas = "groupfinder-icon-class-shaman",  scale = 1.40, },
    
 -- -------------------------------------------------------------------------------------------------------------------
 -- Villain Locations
@@ -328,7 +348,7 @@ ns.points[C.ZONES.BOREANTUNDRA] = { -- Borean Tundra
    [88832838] = { label = "Spire of Pain",                       skull = true, text = "Terrifying temple and altar of pain, ravaged by the bent and broken.",  },
 --   [86932998] = { label = "Ziggeraut of En'kilah",               ziggeraut = true, text = "Floating ziggeraut with a summoning portal on top, no access within.", },
    [69331500] = { label = "Talramas",                            ziggeraut = true, text = "Crashed ziggeraut teeming with the unhollowed, piecing together brethren from the fallen.", npc = "Lich Lord Chillwinter", floors = 3, },
-   [84684086] = { label = "The Wailing Ziggeraut",               ziggeraut = true, text = "Terrifying ziggeraut of cultists and death.", },
+--   [84684086] = { label = "The Wailing Ziggeraut",               ziggeraut = true, text = "Terrifying ziggeraut of cultists and death.", },
 
 }; -- Borean Tundra
 
@@ -371,6 +391,8 @@ ns.points[C.ZONES.ZULDRAK] = { -- ZulDrak
    [46905700] = { label = "Ambush at the Amphitheatre", hbattle = true, npc = "Virsandir", text = "Upon a meeting with the uncorrupted Drakkari, they find that the Scourge are rampaging across Zul'drak and defiling graves. In order to prove themselves, the Horde must fight the champions of the remaining Loa to prove themselves worthy of their divine power.", eventtype = "Gladiatorial Battles", attendee = "Any", schedule = "Thursday, Sept 24th", hevent = true, },
    [58005900] = { label = "Who Needs Gods?", hbattle = true, npc = "Virsandir", text = "The God-Drinker, the troll behind the Scourge Loa, played his hand at the Amphitheatre and revealed his plan. The Scourge are raising the bodies of the fallen Loa and infusing them with necromantic power and the energy of their divine essence to bend them to their will. They could prove to be some of the strongest minions of the Scourge yet! It’s up to the Horde to put a stop to his vile plan.", eventtype = "Battle", attendee = "Any", schedule = "Friday, Sept 25th", hevent = true, },
    [60007800] = { label = "Rising Necropolis", hbattle = true, npc = "Mokron", text = "The Cult of the Damned have taken an interest to reconstruct a fallen necropolis within the area to use as another base of operations and to tighten their grip within the region. Assemble a force and deny the enemy a potential asset!", eventtype = "Battle", attendee = 15, schedule = "Friday, Sept 25th", hevent = true, },
+   [79002300] = { label = "Something Much Bigger", abattle = true, npc = "Virsandir", text = "In a desperate bid for power, The God-Drinker has stolen the last remnants of the Drakkari Loa. Empowered by all at once, he makes his move by raising the children of the Loa as his own personal army to stop the Horde.", eventtype = "Battle, Arc Finale", attendee = "Any", schedule = "Saturday, Sept 26th", hevent = true, },
+
 }; -- ZulDrak
 
 -- -------------------------------------------------------------------------------------------------------------------
@@ -400,7 +422,20 @@ ns.points[C.ZONES.CRYSTALSONGFOREST] = { -- Crystalsong Forest
 }; -- Crystalsong Forest
 
 -- -------------------------------------------------------------------------------------------------------------------
--- Make Indices
+ns.points[C.ZONES.SHOLAZARBASIN] = { -- Sholazar
+-- -------------------------------------------------------------------------------------------------------------------
+
+-- -------------------------------------------------------------------------------------------------------------------
+-- Events Sholazar
+-- [123] = { label = "name", battle = true, npc = "name", text = "text", eventtype = "Battle", attendee = "Any", schedule = "Sunday, Sept 20th", aevent = true, },
+-- -------------------------------------------------------------------------------------------------------------------
+
+   [67004200] = { label = "Unholy", abattle = true, npc = "Straita, Hildira", text = "Forces have been dispatched to invade Sholazar Basin, heeding the dark command of a realm beyond. As the Scourge races to claim hidden Titan secrets, only us and our Ebon Grasp allies are able to stand in their way. The price of victory over a Mawsworn will be steep, however...", eventtype = "Battle, Magic", attendee = 40, schedule = "Saturday, Sept 26th", aevent = true, },
+
+}; -- Sholazar
+
+-- -------------------------------------------------------------------------------------------------------------------
+-- Make Indices  
 -- -------------------------------------------------------------------------------------------------------------------
 if not ns.index then ns.index = {} end;
 ns.index[C.ZONES.DRAGONBLIGHT] = ns.utils.points.index(ns.points[C.ZONES.DRAGONBLIGHT]);
@@ -411,6 +446,7 @@ ns.index[C.ZONES.HOWLINGFJORD]  = ns.utils.points.index(ns.points[C.ZONES.HOWLIN
 ns.index[C.ZONES.ZULDRAK]  = ns.utils.points.index(ns.points[C.ZONES.ZULDRAK]);
 ns.index[C.ZONES.THESTORMPEAKS]  = ns.utils.points.index(ns.points[C.ZONES.THESTORMPEAKS]);
 ns.index[C.ZONES.CRYSTALSONGFOREST]  = ns.utils.points.index(ns.points[C.ZONES.CRYSTALSONGFOREST]);
+ns.index[C.ZONES.SHOLAZARBASIN]  = ns.utils.points.index(ns.points[C.ZONES.SHOLAZARBASIN]);
 -- -------------------------------------------------------------------------------------------------------------------
 -- Check if any points belong on the Dalaran map
 -- -------------------------------------------------------------------------------------------------------------------
@@ -422,6 +458,7 @@ ns.utils.points.translate(ns.points[C.ZONES.HOWLINGFJORD],  C.ZONES.HOWLINGFJORD
 ns.utils.points.translate(ns.points[C.ZONES.ZULDRAK],  C.ZONES.ZULDRAK);
 ns.utils.points.translate(ns.points[C.ZONES.THESTORMPEAKS],  C.ZONES.THESTORMPEAKS);
 ns.utils.points.translate(ns.points[C.ZONES.CRYSTALSONGFOREST],  C.ZONES.CRYSTALSONGFOREST);
+ns.utils.points.translate(ns.points[C.ZONES.SHOLAZARBASIN],  C.ZONES.SHOLAZARBASIN);
 -- -------------------------------------------------------------------------------------------------------------------
 -- Check if any points belong on the Dragonblight map
 -- -------------------------------------------------------------------------------------------------------------------
@@ -432,6 +469,7 @@ ns.utils.points.translate(ns.points[C.ZONES.HOWLINGFJORD],  C.ZONES.HOWLINGFJORD
 ns.utils.points.translate(ns.points[C.ZONES.ZULDRAK],  C.ZONES.ZULDRAK, C.ZONES.DRAGONBLIGHT);
 ns.utils.points.translate(ns.points[C.ZONES.THESTORMPEAKS],  C.ZONES.THESTORMPEAKS, C.ZONES.DRAGONBLIGHT);
 ns.utils.points.translate(ns.points[C.ZONES.CRYSTALSONGFOREST],  C.ZONES.CRYSTALSONGFOREST, C.ZONES.DRAGONBLIGHT);
+ns.utils.points.translate(ns.points[C.ZONES.SHOLAZARBASIN],  C.ZONES.SHOLAZARBASIN, C.ZONES.DRAGONBLIGHT);
 -- -------------------------------------------------------------------------------------------------------------------
 -- Check if any points belong on the Icecrown map
 -- -------------------------------------------------------------------------------------------------------------------
@@ -442,6 +480,7 @@ ns.utils.points.translate(ns.points[C.ZONES.HOWLINGFJORD],  C.ZONES.HOWLINGFJORD
 ns.utils.points.translate(ns.points[C.ZONES.ZULDRAK],  C.ZONES.ZULDRAK,  C.ZONES.ICECROWN);
 ns.utils.points.translate(ns.points[C.ZONES.THESTORMPEAKS],  C.ZONES.THESTORMPEAKS,  C.ZONES.ICECROWN);
 ns.utils.points.translate(ns.points[C.ZONES.CRYSTALSONGFOREST],  C.ZONES.CRYSTALSONGFOREST, C.ZONES.ICECROWN);
+ns.utils.points.translate(ns.points[C.ZONES.SHOLAZARBASIN],  C.ZONES.SHOLAZARBASIN, C.ZONES.ICECROWN);
 -- -------------------------------------------------------------------------------------------------------------------
 -- Check if any points belong on the Borean Tundra map
 -- -------------------------------------------------------------------------------------------------------------------
@@ -452,6 +491,7 @@ ns.utils.points.translate(ns.points[C.ZONES.HOWLINGFJORD], C.ZONES.HOWLINGFJORD,
 ns.utils.points.translate(ns.points[C.ZONES.ZULDRAK], C.ZONES.ZULDRAK, C.ZONES.BOREANTUNDRA);
 ns.utils.points.translate(ns.points[C.ZONES.THESTORMPEAKS], C.ZONES.THESTORMPEAKS, C.ZONES.BOREANTUNDRA);
 ns.utils.points.translate(ns.points[C.ZONES.CRYSTALSONGFOREST],  C.ZONES.CRYSTALSONGFOREST, C.ZONES.BOREANTUNDRA);
+ns.utils.points.translate(ns.points[C.ZONES.SHOLAZARBASIN],  C.ZONES.SHOLAZARBASIN, C.ZONES.BOREANTUNDRA);
 -- -------------------------------------------------------------------------------------------------------------------
 -- Check if any points belong on the Grizzly Hills map
 -- -------------------------------------------------------------------------------------------------------------------
@@ -462,6 +502,7 @@ ns.utils.points.translate(ns.points[C.ZONES.HOWLINGFJORD], C.ZONES.HOWLINGFJORD,
 ns.utils.points.translate(ns.points[C.ZONES.ZULDRAK], C.ZONES.ZULDRAK, C.ZONES.GRIZZLYHILLS);
 ns.utils.points.translate(ns.points[C.ZONES.THESTORMPEAKS], C.ZONES.THESTORMPEAKS, C.ZONES.GRIZZLYHILLS);
 ns.utils.points.translate(ns.points[C.ZONES.CRYSTALSONGFOREST],  C.ZONES.CRYSTALSONGFOREST, C.ZONES.GRIZZLYHILLS);
+ns.utils.points.translate(ns.points[C.ZONES.SHOLAZARBASIN],  C.ZONES.SHOLAZARBASIN, C.ZONES.GRIZZLYHILLS);
 -- -------------------------------------------------------------------------------------------------------------------
 -- Check if any points belong on the Howling Fjord map
 -- -------------------------------------------------------------------------------------------------------------------
@@ -472,6 +513,7 @@ ns.utils.points.translate(ns.points[C.ZONES.BOREANTUNDRA], C.ZONES.BOREANTUNDRA,
 ns.utils.points.translate(ns.points[C.ZONES.ZULDRAK], C.ZONES.ZULDRAK, C.ZONES.HOWLINGFJORD);
 ns.utils.points.translate(ns.points[C.ZONES.THESTORMPEAKS], C.ZONES.THESTORMPEAKS, C.ZONES.HOWLINGFJORD);
 ns.utils.points.translate(ns.points[C.ZONES.CRYSTALSONGFOREST],  C.ZONES.CRYSTALSONGFOREST, C.ZONES.HOWLINGFJORD);
+ns.utils.points.translate(ns.points[C.ZONES.SHOLAZARBASIN],  C.ZONES.SHOLAZARBASIN, C.ZONES.HOWLINGFJORD);
 -- -------------------------------------------------------------------------------------------------------------------
 -- Check if any points belong on the ZulDrak map
 -- -------------------------------------------------------------------------------------------------------------------
@@ -482,6 +524,7 @@ ns.utils.points.translate(ns.points[C.ZONES.HOWLINGFJORD], C.ZONES.HOWLINGFJORD,
 ns.utils.points.translate(ns.points[C.ZONES.BOREANTUNDRA], C.ZONES.BOREANTUNDRA, C.ZONES.ZULDRAK);
 ns.utils.points.translate(ns.points[C.ZONES.THESTORMPEAKS], C.ZONES.THESTORMPEAKS, C.ZONES.ZULDRAK);
 ns.utils.points.translate(ns.points[C.ZONES.CRYSTALSONGFOREST],  C.ZONES.CRYSTALSONGFOREST, C.ZONES.ZULDRAK);
+ns.utils.points.translate(ns.points[C.ZONES.SHOLAZARBASIN],  C.ZONES.SHOLAZARBASIN, C.ZONES.ZULDRAK);
 -- -------------------------------------------------------------------------------------------------------------------
 -- Check if any points belong on the Storm Peaks map
 -- -------------------------------------------------------------------------------------------------------------------
@@ -492,6 +535,7 @@ ns.utils.points.translate(ns.points[C.ZONES.HOWLINGFJORD], C.ZONES.HOWLINGFJORD,
 ns.utils.points.translate(ns.points[C.ZONES.ZULDRAK], C.ZONES.ZULDRAK, C.ZONES.THESTORMPEAKS);
 ns.utils.points.translate(ns.points[C.ZONES.BOREANTUNDRA], C.ZONES.BOREANTUNDRA, C.ZONES.THESTORMPEAKS);
 ns.utils.points.translate(ns.points[C.ZONES.CRYSTALSONGFOREST],  C.ZONES.CRYSTALSONGFOREST, C.ZONES.THESTORMPEAKS);
+ns.utils.points.translate(ns.points[C.ZONES.SHOLAZARBASIN],  C.ZONES.SHOLAZARBASIN, C.ZONES.THESTORMPEAKS);
 -- -------------------------------------------------------------------------------------------------------------------
 -- Check if any points belong on the Crystalsong map
 -- -------------------------------------------------------------------------------------------------------------------
@@ -502,3 +546,15 @@ ns.utils.points.translate(ns.points[C.ZONES.HOWLINGFJORD], C.ZONES.HOWLINGFJORD,
 ns.utils.points.translate(ns.points[C.ZONES.ZULDRAK], C.ZONES.ZULDRAK, C.ZONES.CRYSTALSONGFOREST);
 ns.utils.points.translate(ns.points[C.ZONES.BOREANTUNDRA], C.ZONES.BOREANTUNDRA, C.ZONES.CRYSTALSONGFOREST);
 ns.utils.points.translate(ns.points[C.ZONES.THESTORMPEAKS],  C.ZONES.THESTORMPEAKS, C.ZONES.CRYSTALSONGFOREST);
+ns.utils.points.translate(ns.points[C.ZONES.SHOLAZARBASIN],  C.ZONES.SHOLAZARBASIN, C.ZONES.CRYSTALSONGFOREST);
+-- -------------------------------------------------------------------------------------------------------------------
+-- Check if any points belong on the Sholazar map
+-- -------------------------------------------------------------------------------------------------------------------
+ns.utils.points.translate(ns.points[C.ZONES.DRAGONBLIGHT], C.ZONES.DRAGONBLIGHT, C.ZONES.SHOLAZARBASIN);
+ns.utils.points.translate(ns.points[C.ZONES.ICECROWN], C.ZONES.ICECROWN, C.ZONES.SHOLAZARBASIN);
+ns.utils.points.translate(ns.points[C.ZONES.GRIZZLYHILLS], C.ZONES.GRIZZLYHILLS, C.ZONES.SHOLAZARBASIN);
+ns.utils.points.translate(ns.points[C.ZONES.HOWLINGFJORD], C.ZONES.HOWLINGFJORD, C.ZONES.SHOLAZARBASIN);
+ns.utils.points.translate(ns.points[C.ZONES.ZULDRAK], C.ZONES.ZULDRAK, C.ZONES.SHOLAZARBASIN);
+ns.utils.points.translate(ns.points[C.ZONES.BOREANTUNDRA], C.ZONES.BOREANTUNDRA, C.ZONES.SHOLAZARBASIN);
+ns.utils.points.translate(ns.points[C.ZONES.THESTORMPEAKS],  C.ZONES.THESTORMPEAKS, C.ZONES.SHOLAZARBASIN);
+ns.utils.points.translate(ns.points[C.ZONES.CRYSTALSONGFOREST],  C.ZONES.CRYSTALSONGFOREST, C.ZONES.SHOLAZARBASIN);
