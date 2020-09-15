@@ -16,7 +16,6 @@ ns.points[C.ZONES.NORTHREND] = { -- Northrend continent
   [75007200] = { label = "WC - Northrend Campaign",       campaign = true, campaigntype = "In Death's Shadow", text = "Forces answer the call for aid, tracking and ending the Scourge in Howling Fjord.",  },
   [54002600] = { label = "WC - Northrend Campaign",       campaign = true, campaigntype = "In Death's Shadow", text = "Forces answer the call for aid, tracking and ending the Scourge in Storm Peaks.",  },
   [30004100] = { label = "WC - Northrend Campaign",       campaign = true, campaigntype = "In Death's Shadow", text = "Forces answer the call for aid, tracking and ending the Scourge in Sholazar Basin.",  },
-
 };
 
 -- -------------------------------------------------------------------------------------------------------------------

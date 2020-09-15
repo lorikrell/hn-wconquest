@@ -258,6 +258,7 @@ ns.points[C.ZONES.ICECROWN] = { -- Icecrown
    [55604000] = { label = "The Battle for Aldur'thar", tank = true, npc = "Vehicle Battle Team", proxy = "The battle occurs in Discord.", text = "Aldur’thar, the Desolation Gate, stands as one of the final barriers to Icecrown Citadel. The coalition must seize it with all the firepower they have.", eventtype = "Vehicle, Battle", attendee = 30, schedule = "Sunday, Sept 20th", nevent = true, },
 -- wednesday 30th
    [50007700] = { label = "The Siege of Icecrown", battle = true, npc = "Thaugrim Lead Tactician", phasing = "We recommend completing Icecrown quests.", text = "It has all led to this. Our best hopes of securing Northrend are in securing Icecrown Citadel itself. All Coalition forces rally as one to break the greatest bastion of Scourge defense on the continent. Our objective: barricade the Citadel gates and claim all grounds around it.", eventtype = "Final War", attendee = "Special", schedule = "Wednesday, Sept 30th", nevent = true, },
+
 -- -------------------------------------------------------------------------------------------------------------------
 -- Coalition Locations
 -- -------------------------------------------------------------------------------------------------------------------
