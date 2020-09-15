@@ -89,6 +89,8 @@ ncamp = { icon = "Interface\\AddOns\\HandyNotes_WarcraftConquest\\Art\\ncamp.tga
 supplies = { icon = "Interface\\AddOns\\HandyNotes_WarcraftConquest\\Art\\supplies.tga", scale = 2.00};
 repairs = { icon = "Interface\\AddOns\\HandyNotes_WarcraftConquest\\Art\\repairs.tga", scale = 2.00};
 mining = { icon = "Interface\\AddOns\\HandyNotes_WarcraftConquest\\Art\\mining.tga", scale = 2.00};
+bombs = { icon = "Interface\\AddOns\\HandyNotes_WarcraftConquest\\Art\\bombs.tga", scale = 2.00};
+stable = { icon = "Interface\\AddOns\\HandyNotes_WarcraftConquest\\Art\\stable.tga", scale = 2.00};
 medic = { icon = "Interface\\AddOns\\HandyNotes_WarcraftConquest\\Art\\medic.tga", scale = 2.00};
 inn = { icon = "Interface\\AddOns\\HandyNotes_WarcraftConquest\\Art\\inn.tga", scale = 2.00};
 alchemy = { icon = "Interface\\AddOns\\HandyNotes_WarcraftConquest\\Art\\alchemy.tga", scale = 2.00};

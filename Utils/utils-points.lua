@@ -196,6 +196,8 @@ local function work_out_texture(point)
     elseif point.repairs     and (ns.db.show_camp or custom)           then texture = repairs
     elseif point.cuisine      and (ns.db.show_misc  or custom)         then texture = food
     elseif point.mining      and (ns.db.show_camp or custom)           then texture = mining
+    elseif point.bombs       and (ns.db.show_camp or custom)           then texture = bombs
+    elseif point.stable      and (ns.db.show_camp or custom)           then texture = stable
     elseif point.medic       and (ns.db.show_camp or custom)           then texture = medic
     elseif point.supplies    and (ns.db.show_camp or custom)           then texture = supplies
     elseif point.inn         and (ns.db.show_camp or custom)           then texture = inn
@@ -548,6 +550,9 @@ local function should_show_point(coord, point, currentZone, isMinimap)
       if ns.db.show_camp     and point.medic             then show = true; end;
       if ns.db.show_camp     and point.repairs           then show = true; end;
       if ns.db.show_camp     and point.supplies          then show = true; end;
+      if ns.db.show_camp     and point.mining            then show = true; end;
+      if ns.db.show_camp     and point.bombs            then show = true; end;
+      if ns.db.show_camp     and point.stable            then show = true; end;
       if ns.db.show_camp     and point.inn               then show = true; end;
       if ns.db.show_camp     and point.food              then show = true; end;
       if ns.db.show_camp     and point.barracks          then show = true; end;
@@ -635,6 +640,8 @@ local function should_show_point(coord, point, currentZone, isMinimap)
                              and not point.alchemy
                              and not point.repairs
                              and not point.mining
+                             and not point.bombs
+                             and not point.stable
                              and not point.skull
                              and not point.ziggeraut
                              and not point.boss
