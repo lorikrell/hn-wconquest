@@ -81,9 +81,9 @@ hhorror = { icon = "Interface\\AddOns\\HandyNotes_WarcraftConquest\\Art\\hhorror
 hmagical = { icon = "Interface\\AddOns\\HandyNotes_WarcraftConquest\\Art\\hmagic.tga", scale = 3.0,};
 hstealth = { icon = "Interface\\AddOns\\HandyNotes_WarcraftConquest\\Art\\hstealth.tga", scale = 3.0,};
 
-acamp = { icon = "Interface\\AddOns\\HandyNotes_WarcraftConquest\\Art\\alliance.tga", scale = 3.0,};
-hcamp = { icon = "Interface\\AddOns\\HandyNotes_WarcraftConquest\\Art\\horde.tga", scale = 3.0,};
-ncamp = { icon = "Interface\\AddOns\\HandyNotes_WarcraftConquest\\Art\\ncamp.tga", scale = 3.0,};
+acamp = { icon = "Interface\\AddOns\\HandyNotes_WarcraftConquest\\Art\\alliance.tga", scale = 3.5,};
+hcamp = { icon = "Interface\\AddOns\\HandyNotes_WarcraftConquest\\Art\\horde.tga", scale = 3.5,};
+ncamp = { icon = "Interface\\AddOns\\HandyNotes_WarcraftConquest\\Art\\ncamp.tga", scale = 3.5,};
 
 -- City
 supplies = { icon = "Interface\\AddOns\\HandyNotes_WarcraftConquest\\Art\\supplies.tga", scale = 2.00};
