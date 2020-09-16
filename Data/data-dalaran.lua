@@ -99,7 +99,7 @@ ns.points[C.ZONES.DALARAN] = { -- Dalaran
 -- Battle Centers: 
 -- -------------------------------------------------------------------------------------------------------------------
    [58112030] = {label = "Sunreaver's Santuary",                     horde = true, floors = 2, scale = 2.5, text = "War headquarters for the Horde and Sunreavers with portals, supplies, and apothecary labs.", },
-   [33026822] = {label = "Silver Enclave",                           alliance = true, floors = 2, scale = 2.5, text = "War headquarters for the Horde and Silver Covenant with portals, supplies, and magisters.", },
+   [33026822] = {label = "Silver Enclave",                           alliance = true, floors = 2, scale = 2.5, text = "War headquarters for the Alliance and Silver Covenant with portals, supplies, and magisters.", },
 
 -- -------------------------------------------------------------------------------------------------------------------
 -- Other

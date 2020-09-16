@@ -85,6 +85,8 @@ acamp = { icon = "Interface\\AddOns\\HandyNotes_WarcraftConquest\\Art\\alliance.
 hcamp = { icon = "Interface\\AddOns\\HandyNotes_WarcraftConquest\\Art\\horde.tga", scale = 3.5,};
 ncamp = { icon = "Interface\\AddOns\\HandyNotes_WarcraftConquest\\Art\\ncamp.tga", scale = 3.5,};
 
+deathfinal = { icon = "Interface\\AddOns\\HandyNotes_WarcraftConquest\\Art\\death-shadow-finale.tga", scale = 6.50};
+
 -- City
 supplies = { icon = "Interface\\AddOns\\HandyNotes_WarcraftConquest\\Art\\supplies.tga", scale = 2.00};
 repairs = { icon = "Interface\\AddOns\\HandyNotes_WarcraftConquest\\Art\\repairs.tga", scale = 2.00};
