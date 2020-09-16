@@ -101,7 +101,7 @@ local function work_out_label(point)
 
     -- change the colors for ships and closed stuff and empty stuff and official stuff
     if        point.official                                  then r, g, b = 0, 0.75, 1;
-       elseif point.event or point.battle or point.naval or point.tank or point.horror or point.magical or point.medical or point.report or point.stealth     then r, g, b = 1, 0.9, 0.6;
+       elseif point.event or point.battle or point.naval or point.tank or point.horror or point.magical or point.medical or point.report or point.stealth or point.deathfinal    then r, g, b = 1, 0.9, 0.6;
        elseif point.hbattle or point.hhorror or point.hmagical or point.hreport or point.hstealth     then r, g, b = 1, 0.1, 0;
        elseif point.abattle or point.ahorror or point.amagical or point.areport or point.astealth     then r, g, b = 0.2, 0.7, 1;
        elseif point.wclogo or point.campaign then r, g, b = 0.1, 0.6, 1; 
@@ -206,6 +206,8 @@ local function work_out_texture(point)
     elseif point.engineering and (ns.db.show_camp or custom)           then texture = engineering
     elseif point.magic       and (ns.db.show_camp or custom)           then texture = magic
     elseif point.barracks    and (ns.db.show_camp or custom)           then texture = barracks
+
+    elseif point.deathfinal  and (ns.db.show_event or custom)          then texture = deathfinal
 
     elseif point.acamp       and (ns.db.show_camp or custom)           then texture = acamp
     elseif point.hcamp       and (ns.db.show_camp or custom)           then texture = hcamp
@@ -449,7 +451,7 @@ end;
 
 local function tt_text(point)
       local section = {};
-      if point.text then table.insert(section, { "|cfffdd03bEvent:|r " .. point.text, .9, .9, .9 } ); end; -- if
+      if point.text then table.insert(section, { "|cfffdd03bInfo:|r " .. point.text, .9, .9, .9 } ); end; -- if
       return section;
 end;
 
@@ -551,7 +553,8 @@ local function should_show_point(coord, point, currentZone, isMinimap)
       if ns.db.show_camp     and point.repairs           then show = true; end;
       if ns.db.show_camp     and point.supplies          then show = true; end;
       if ns.db.show_camp     and point.mining            then show = true; end;
-      if ns.db.show_camp     and point.bombs            then show = true; end;
+      if ns.db.show_event    and point.deathfinal        then show = true; end;
+      if ns.db.show_camp     and point.bombs             then show = true; end;
       if ns.db.show_camp     and point.stable            then show = true; end;
       if ns.db.show_camp     and point.inn               then show = true; end;
       if ns.db.show_camp     and point.food              then show = true; end;
@@ -628,6 +631,7 @@ local function should_show_point(coord, point, currentZone, isMinimap)
                              and not point.roundtent
                              and not point.allianceair
                              and not point.hordeair
+                             and not point.deathfinal
                              and not point.tower
                              and not point.horde
                              and not point.docks
