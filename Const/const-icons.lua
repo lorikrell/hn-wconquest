@@ -68,13 +68,16 @@ horror = { icon = "Interface\\AddOns\\HandyNotes_WarcraftConquest\\Art\\horror.t
 magical = { icon = "Interface\\AddOns\\HandyNotes_WarcraftConquest\\Art\\magical.tga", scale = 3.0,};
 medical = { icon = "Interface\\AddOns\\HandyNotes_WarcraftConquest\\Art\\medical.tga", scale = 3.0,};
 stealth = { icon = "Interface\\AddOns\\HandyNotes_WarcraftConquest\\Art\\stealth.tga", scale = 3.0,};
+meeting = { icon = "Interface\\AddOns\\HandyNotes_WarcraftConquest\\Art\\meeting.tga", scale = 3.0,};
 
+ameeting = { icon = "Interface\\AddOns\\HandyNotes_WarcraftConquest\\Art\\ameeting.tga", scale = 3.0,};
 abattle = { icon = "Interface\\AddOns\\HandyNotes_WarcraftConquest\\Art\\abattle.tga", scale = 3.0,};
 areport = { icon = "Interface\\AddOns\\HandyNotes_WarcraftConquest\\Art\\areport.tga", scale = 3.0,};
 ahorror = { icon = "Interface\\AddOns\\HandyNotes_WarcraftConquest\\Art\\ahorror.tga", scale = 3.0,};
 amagical = { icon = "Interface\\AddOns\\HandyNotes_WarcraftConquest\\Art\\amagic.tga", scale = 3.0,};
 astealth = { icon = "Interface\\AddOns\\HandyNotes_WarcraftConquest\\Art\\astealth.tga", scale = 3.0,};
 
+hmeeting = { icon = "Interface\\AddOns\\HandyNotes_WarcraftConquest\\Art\\hmeeting.tga", scale = 3.0,};
 hbattle = { icon = "Interface\\AddOns\\HandyNotes_WarcraftConquest\\Art\\hbattle.tga", scale = 3.0,};
 hreport = { icon = "Interface\\AddOns\\HandyNotes_WarcraftConquest\\Art\\hreport.tga", scale = 3.0,};
 hhorror = { icon = "Interface\\AddOns\\HandyNotes_WarcraftConquest\\Art\\hhorror.tga", scale = 3.0,};
