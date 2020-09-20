@@ -101,9 +101,9 @@ local function work_out_label(point)
 
     -- change the colors for ships and closed stuff and empty stuff and official stuff
     if        point.official                                  then r, g, b = 0, 0.75, 1;
-       elseif point.event or point.battle or point.naval or point.tank or point.horror or point.magical or point.medical or point.report or point.stealth or point.deathfinal    then r, g, b = 1, 0.9, 0.6;
-       elseif point.hbattle or point.hhorror or point.hmagical or point.hreport or point.hstealth     then r, g, b = 1, 0.1, 0;
-       elseif point.abattle or point.ahorror or point.amagical or point.areport or point.astealth     then r, g, b = 0.2, 0.7, 1;
+       elseif point.event or point.battle or point.naval or point.tank or point.horror or point.magical or point.medical or point.report or point.stealth or point.meeting or point.deathfinal    then r, g, b = 1, 0.9, 0.6;
+       elseif point.hbattle or point.hhorror or point.hmagical or point.hreport or point.hstealth or point.hmeeting    then r, g, b = 1, 0.1, 0;
+       elseif point.abattle or point.ahorror or point.amagical or point.areport or point.astealth or point.ameeting    then r, g, b = 0.2, 0.7, 1;
        elseif point.wclogo or point.campaign then r, g, b = 0.1, 0.6, 1; 
        elseif point.spoiler                                   then r, g, b = 1, 0.5, 0;  label = "Spoilers: " .. label
        elseif point.empty and point.closed and not point.ship then r, g, b = 0.75, 0.75, 0.75; label = label .. " [empty, closed]"
@@ -179,18 +179,21 @@ local function work_out_texture(point)
     elseif point.magical     and (ns.db.show_event  or custom)         then texture = magical
     elseif point.medical     and (ns.db.show_event  or custom)         then texture = medical
     elseif point.report      and (ns.db.show_event  or custom)         then texture = report
+    elseif point.meeting      and (ns.db.show_event  or custom)        then texture = meeting
     elseif point.stealth     and (ns.db.show_event  or custom)         then texture = stealth
 
     elseif point.abattle      and (ns.db.show_event  or custom)         then texture = abattle
     elseif point.ahorror      and (ns.db.show_event  or custom)         then texture = ahorror
     elseif point.amagical     and (ns.db.show_event  or custom)         then texture = amagical
     elseif point.areport      and (ns.db.show_event  or custom)         then texture = areport
+    elseif point.ameeting      and (ns.db.show_event  or custom)        then texture = ameeting
     elseif point.astealth     and (ns.db.show_event  or custom)         then texture = astealth
 
     elseif point.hbattle      and (ns.db.show_event  or custom)         then texture = hbattle
     elseif point.hhorror      and (ns.db.show_event  or custom)         then texture = hhorror
     elseif point.hmagical     and (ns.db.show_event  or custom)         then texture = hmagical
     elseif point.hreport      and (ns.db.show_event  or custom)         then texture = hreport
+    elseif point.hmeeting     and (ns.db.show_event  or custom)        then texture = hmeeting
     elseif point.hstealth     and (ns.db.show_event  or custom)         then texture = hstealth
 
     elseif point.repairs     and (ns.db.show_camp or custom)           then texture = repairs
@@ -593,6 +596,9 @@ local function should_show_point(coord, point, currentZone, isMinimap)
       if ns.db.show_event    and point.magical           then show = true; end;
       if ns.db.show_event    and point.medical           then show = true; end;
       if ns.db.show_event    and point.report            then show = true; end;
+      if ns.db.show_event    and point.meeting            then show = true; end;
+      if ns.db.show_event    and point.ameeting            then show = true; end;
+      if ns.db.show_event    and point.hmeeting            then show = true; end;
       if ns.db.show_event    and point.stealth           then show = true; end;
       if ns.db.show_event    and point.abattle           then show = true; end;
       if ns.db.show_event    and point.ahorror           then show = true; end;
@@ -669,6 +675,9 @@ local function should_show_point(coord, point, currentZone, isMinimap)
                              and not point.ahorror
                              and not point.amagical
                              and not point.areport
+                             and not point.meeting
+                             and not point.hmeeting
+                             and not point.ameeting
                              and not point.astealth
                              and not point.abattle
                              and not point.wclogo
