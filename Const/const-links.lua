@@ -9,9 +9,9 @@ local meta      = GetAddOnMetadata;
 
 local invite_base    = "https://worldofwarcraft.com/en-us/invite/%s?region=US&faction=Alliance";
 
-C.LINK.WConquest_Prefix  = "https://gamerchic.org/warcraft-conquest/addon.html";
+C.LINK.WConquest_Prefix  = "https://tinyurl.com/wc-handynotes";
 C.LINK.WConquest         = "";
-C.LINK.WConquest_URL     = "https://gamerchic.org/warcraft-conquest/warcraft-conquest.html";
+C.LINK.WConquest_URL     = "https://tinyurl.com/warcraftconquest-site";
 C.LINK.WConquest_Label   = "Warcraft Conquest Sites";
 C.LINK.WConquest_Help    = fmt("SLASH [[link Website]] - %s - [%s%s]", C.LINK.WConquest_Label, C.LINK.WConquest_Prefix, C.LINK.WConquest);
 
@@ -22,7 +22,7 @@ C.LINK.Discord_Label = "Warcraft Conquest Discord";
 C.LINK.Discord_Help = fmt("SLASH [[invite discord]] - %s - [%s]", C.LINK.Discord_Label, C.LINK.Discord_Code);
 
 C.LINK.Site      = "/addon";
-C.LINK.Site_URL  = "https://wow.curseforge.com/projects/handynotes-warcraft-conquest";
+C.LINK.Site_URL  = "https://tinyurl.com/wc-handynotes";
 C.LINK.Site_Label = "HandyNotes: Warcraft Conquest";
 C.LINK.Site_Help = fmt("SLASH [[link Addon]] - %s - [%s%s]", C.LINK.Site_Label, C.LINK.WConquest_Prefix, C.LINK.Site);
 
