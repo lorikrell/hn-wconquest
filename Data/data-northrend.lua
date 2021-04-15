@@ -132,7 +132,7 @@ if not ns.points then ns.points = {} end;
 -- -------------------------------------------------------------------------------------------------------------------
 ns.points[C.ZONES.DRAGONBLIGHT] = { -- Dragonblight
 
-   [15508270] = { label = "In Death's Shadow, 2020",         wclogo = true,  text = "In Death's Shadow campaign Sept 2020: Hover over icons for camps and events. Use /wconquest to find links for more information.", },
+   [15508270] = { label = "In Death's Shadow, 2020",         wclogo = true,  text = "In Death's Shadow campaign | Sept 2020 | https://tinyurl.com/wc-deathshadow", },
 
 -- -------------------------------------------------------------------------------------------------------------------
 -- Events Dragonblight    

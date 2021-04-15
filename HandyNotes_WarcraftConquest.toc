@@ -2,7 +2,7 @@
 ## Title: HandyNotes: |cff00d9ffWarcraftConquest|r
 ## Notes: In-game locations for Warcraft Conquest campaigns!
 ## Author: Sonceri
-## Version: 0.100
+## Version: 1.4.0
 ## DefaultState: enabled
 ## SavedVariables: HandyNotes_WarcraftConquest
 ## RequiredDeps: HandyNotes
