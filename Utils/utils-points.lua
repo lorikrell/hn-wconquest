@@ -705,10 +705,10 @@ local function should_show_point(coord, point, currentZone, isMinimap)
     if isMinimap and not ns.db.show_on_minimap 
        -- on the minimap but not showing it
        then show = false
-       -- on the main map and not in boralus and we're not showing other maps
+       -- on the main map and not in dalaran and we're not showing other maps
        elseif not isMinimap and currentZone ~= C.ZONES.DALARAN and not ns.db.show_on_northrend
        then show = false
-       -- on the main map and we're not showing boralus locations
+       -- on the main map and we're not showing dalaran locations
        elseif not isMinimap and not ns.db.show_on_city 
        then show = false
     end; -- if/then/elseif/then

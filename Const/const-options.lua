@@ -68,9 +68,9 @@ ns.options = {
     maps = { type = "group", name = "Map selections", inline = true, order = 200,
       args = {
         desc             = { name = "Choose maps on which to display icons.", type = "description", order = 210, },
-        show_on_city     = { type = "toggle", name = "Dalaran Map",    order = 220, desc = "Show icons on city map",                 },
+        --show_on_city     = { type = "toggle", name = "Dalaran Map",    order = 220, desc = "Show icons on city map",                 },
         show_on_minimap  = { type = "toggle", name = "Minimap",        order = 230, desc = "Show icons on the minimap",              },
-        show_on_northrend = { type = "toggle", name = "Northrend Maps", order = 240, desc = "Show icons on nearby maps in Northrend", }, 
+        show_on_northrend = { type = "toggle", name = "Northrend - In Death's Shadow", order = 240, desc = "Show icons on nearby maps in Northrend", }, 
       }, },
     -- Locations to show --------------------------------------------------------------------------------------------------------------------------------
     show = { type = "group", name = "Location Types", inline = true, order = 400,

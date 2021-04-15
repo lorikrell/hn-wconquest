@@ -59,49 +59,49 @@ t.arrow         =
 -- --------------------------------------------------------------------------------------------------------
 
 -- Events
-tank = { icon = "Interface\\AddOns\\HandyNotes_WarcraftConquest\\Art\\tank.tga", scale = 3.0,};
-naval = { icon = "Interface\\AddOns\\HandyNotes_WarcraftConquest\\Art\\naval.tga", scale = 3.0,};
-battle = { icon = "Interface\\AddOns\\HandyNotes_WarcraftConquest\\Art\\battle.tga", scale = 3.0,};
-report = { icon = "Interface\\AddOns\\HandyNotes_WarcraftConquest\\Art\\report.tga", scale = 3.0,};
-horror = { icon = "Interface\\AddOns\\HandyNotes_WarcraftConquest\\Art\\horror.tga", scale = 3.0,};
-magical = { icon = "Interface\\AddOns\\HandyNotes_WarcraftConquest\\Art\\magical.tga", scale = 3.0,};
-medical = { icon = "Interface\\AddOns\\HandyNotes_WarcraftConquest\\Art\\medical.tga", scale = 3.0,};
-stealth = { icon = "Interface\\AddOns\\HandyNotes_WarcraftConquest\\Art\\stealth.tga", scale = 3.0,};
-meeting = { icon = "Interface\\AddOns\\HandyNotes_WarcraftConquest\\Art\\meeting.tga", scale = 3.0,};
+tank = { icon = "Interface\\AddOns\\HandyNotes_WarcraftConquest\\Art\\tank.tga", scale = 2.5,};
+naval = { icon = "Interface\\AddOns\\HandyNotes_WarcraftConquest\\Art\\naval.tga", scale = 2.5,};
+battle = { icon = "Interface\\AddOns\\HandyNotes_WarcraftConquest\\Art\\battle.tga", scale = 2.5,};
+report = { icon = "Interface\\AddOns\\HandyNotes_WarcraftConquest\\Art\\report.tga", scale = 2.5,};
+horror = { icon = "Interface\\AddOns\\HandyNotes_WarcraftConquest\\Art\\horror.tga", scale = 2.5,};
+magical = { icon = "Interface\\AddOns\\HandyNotes_WarcraftConquest\\Art\\magical.tga", scale = 2.5,};
+medical = { icon = "Interface\\AddOns\\HandyNotes_WarcraftConquest\\Art\\medical.tga", scale = 2.5,};
+stealth = { icon = "Interface\\AddOns\\HandyNotes_WarcraftConquest\\Art\\stealth.tga", scale = 2.5,};
+meeting = { icon = "Interface\\AddOns\\HandyNotes_WarcraftConquest\\Art\\meeting.tga", scale = 2.5,};
 
-ameeting = { icon = "Interface\\AddOns\\HandyNotes_WarcraftConquest\\Art\\ameeting.tga", scale = 3.0,};
-abattle = { icon = "Interface\\AddOns\\HandyNotes_WarcraftConquest\\Art\\abattle.tga", scale = 3.0,};
-areport = { icon = "Interface\\AddOns\\HandyNotes_WarcraftConquest\\Art\\areport.tga", scale = 3.0,};
-ahorror = { icon = "Interface\\AddOns\\HandyNotes_WarcraftConquest\\Art\\ahorror.tga", scale = 3.0,};
-amagical = { icon = "Interface\\AddOns\\HandyNotes_WarcraftConquest\\Art\\amagic.tga", scale = 3.0,};
-astealth = { icon = "Interface\\AddOns\\HandyNotes_WarcraftConquest\\Art\\astealth.tga", scale = 3.0,};
+ameeting = { icon = "Interface\\AddOns\\HandyNotes_WarcraftConquest\\Art\\ameeting.tga", scale = 2.5,};
+abattle = { icon = "Interface\\AddOns\\HandyNotes_WarcraftConquest\\Art\\abattle.tga", scale = 2.5,};
+areport = { icon = "Interface\\AddOns\\HandyNotes_WarcraftConquest\\Art\\areport.tga", scale = 2.5,};
+ahorror = { icon = "Interface\\AddOns\\HandyNotes_WarcraftConquest\\Art\\ahorror.tga", scale = 2.5,};
+amagical = { icon = "Interface\\AddOns\\HandyNotes_WarcraftConquest\\Art\\amagic.tga", scale = 2.5,};
+astealth = { icon = "Interface\\AddOns\\HandyNotes_WarcraftConquest\\Art\\astealth.tga", scale = 2.5,};
 
-hmeeting = { icon = "Interface\\AddOns\\HandyNotes_WarcraftConquest\\Art\\hmeeting.tga", scale = 3.0,};
-hbattle = { icon = "Interface\\AddOns\\HandyNotes_WarcraftConquest\\Art\\hbattle.tga", scale = 3.0,};
-hreport = { icon = "Interface\\AddOns\\HandyNotes_WarcraftConquest\\Art\\hreport.tga", scale = 3.0,};
-hhorror = { icon = "Interface\\AddOns\\HandyNotes_WarcraftConquest\\Art\\hhorror.tga", scale = 3.0,};
-hmagical = { icon = "Interface\\AddOns\\HandyNotes_WarcraftConquest\\Art\\hmagic.tga", scale = 3.0,};
-hstealth = { icon = "Interface\\AddOns\\HandyNotes_WarcraftConquest\\Art\\hstealth.tga", scale = 3.0,};
+hmeeting = { icon = "Interface\\AddOns\\HandyNotes_WarcraftConquest\\Art\\hmeeting.tga", scale = 2.5,};
+hbattle = { icon = "Interface\\AddOns\\HandyNotes_WarcraftConquest\\Art\\hbattle.tga", scale = 2.5,};
+hreport = { icon = "Interface\\AddOns\\HandyNotes_WarcraftConquest\\Art\\hreport.tga", scale = 2.5,};
+hhorror = { icon = "Interface\\AddOns\\HandyNotes_WarcraftConquest\\Art\\hhorror.tga", scale = 2.5,};
+hmagical = { icon = "Interface\\AddOns\\HandyNotes_WarcraftConquest\\Art\\hmagic.tga", scale = 2.5,};
+hstealth = { icon = "Interface\\AddOns\\HandyNotes_WarcraftConquest\\Art\\hstealth.tga", scale = 2.5,};
 
-acamp = { icon = "Interface\\AddOns\\HandyNotes_WarcraftConquest\\Art\\alliance.tga", scale = 3.5,};
-hcamp = { icon = "Interface\\AddOns\\HandyNotes_WarcraftConquest\\Art\\horde.tga", scale = 3.5,};
-ncamp = { icon = "Interface\\AddOns\\HandyNotes_WarcraftConquest\\Art\\ncamp.tga", scale = 3.5,};
+acamp = { icon = "Interface\\AddOns\\HandyNotes_WarcraftConquest\\Art\\alliance.tga", scale = 2.5,};
+hcamp = { icon = "Interface\\AddOns\\HandyNotes_WarcraftConquest\\Art\\horde.tga", scale = 2.5,};
+ncamp = { icon = "Interface\\AddOns\\HandyNotes_WarcraftConquest\\Art\\ncamp.tga", scale = 2.5,};
 
-deathfinal = { icon = "Interface\\AddOns\\HandyNotes_WarcraftConquest\\Art\\death-shadow-finale.tga", scale = 6.50};
+deathfinal = { icon = "Interface\\AddOns\\HandyNotes_WarcraftConquest\\Art\\death-shadow-finale.tga", scale = 6.00};
 
 -- City
-supplies = { icon = "Interface\\AddOns\\HandyNotes_WarcraftConquest\\Art\\supplies.tga", scale = 2.00};
-repairs = { icon = "Interface\\AddOns\\HandyNotes_WarcraftConquest\\Art\\repairs.tga", scale = 2.00};
-mining = { icon = "Interface\\AddOns\\HandyNotes_WarcraftConquest\\Art\\mining.tga", scale = 2.00};
-bombs = { icon = "Interface\\AddOns\\HandyNotes_WarcraftConquest\\Art\\bombs.tga", scale = 2.00};
-stable = { icon = "Interface\\AddOns\\HandyNotes_WarcraftConquest\\Art\\stable.tga", scale = 2.00};
-medic = { icon = "Interface\\AddOns\\HandyNotes_WarcraftConquest\\Art\\medic.tga", scale = 2.00};
-inn = { icon = "Interface\\AddOns\\HandyNotes_WarcraftConquest\\Art\\inn.tga", scale = 2.00};
-alchemy = { icon = "Interface\\AddOns\\HandyNotes_WarcraftConquest\\Art\\alchemy.tga", scale = 2.00};
-engineering = { icon = "Interface\\AddOns\\HandyNotes_WarcraftConquest\\Art\\engineering.tga", scale = 2.00};
-barracks = { icon = "Interface\\AddOns\\HandyNotes_WarcraftConquest\\Art\\barracks.tga", scale = 2.00};
-magic = { icon = "Interface\\AddOns\\HandyNotes_WarcraftConquest\\Art\\magic.tga", scale = 2.00};
-food = { icon = "Interface\\AddOns\\HandyNotes_WarcraftConquest\\Art\\food.tga", scale = 2.00};
+supplies = { icon = "Interface\\AddOns\\HandyNotes_WarcraftConquest\\Art\\supplies.tga", scale = 1.25};
+repairs = { icon = "Interface\\AddOns\\HandyNotes_WarcraftConquest\\Art\\repairs.tga", scale = 1.25};
+mining = { icon = "Interface\\AddOns\\HandyNotes_WarcraftConquest\\Art\\mining.tga", scale = 1.25};
+bombs = { icon = "Interface\\AddOns\\HandyNotes_WarcraftConquest\\Art\\bombs.tga", scale = 1.25};
+stable = { icon = "Interface\\AddOns\\HandyNotes_WarcraftConquest\\Art\\stable.tga", scale = 1.25};
+medic = { icon = "Interface\\AddOns\\HandyNotes_WarcraftConquest\\Art\\medic.tga", scale = 1.25};
+inn = { icon = "Interface\\AddOns\\HandyNotes_WarcraftConquest\\Art\\inn.tga", scale = 1.25};
+alchemy = { icon = "Interface\\AddOns\\HandyNotes_WarcraftConquest\\Art\\alchemy.tga", scale = 1.25};
+engineering = { icon = "Interface\\AddOns\\HandyNotes_WarcraftConquest\\Art\\engineering.tga", scale = 1.25};
+barracks = { icon = "Interface\\AddOns\\HandyNotes_WarcraftConquest\\Art\\barracks.tga", scale = 1.25};
+magic = { icon = "Interface\\AddOns\\HandyNotes_WarcraftConquest\\Art\\magic.tga", scale = 1.25};
+food = { icon = "Interface\\AddOns\\HandyNotes_WarcraftConquest\\Art\\food.tga", scale = 1.25};
 
 -- Villain
 skullblood = { icon = "Interface\\AddOns\\HandyNotes_WarcraftConquest\\Art\\skull-blood.tga", scale = 3.0};
@@ -118,7 +118,7 @@ knight = { icon = "Interface\\AddOns\\HandyNotes_WarcraftConquest\\Art\\boss-kni
 vault = { icon = "Interface\\AddOns\\HandyNotes_WarcraftConquest\\Art\\dk.tga", scale = 3.0};
 scarlet = { icon = "Interface\\AddOns\\HandyNotes_WarcraftConquest\\Art\\v-scarlets.tga", scale = 3.0};
 
-wclogo = { icon = "Interface\\AddOns\\HandyNotes_WarcraftConquest\\Art\\wcicon.tga", scale = 10.0};
+wclogo = { icon = "Interface\\AddOns\\HandyNotes_WarcraftConquest\\Art\\wcicon.tga", scale = 8.0};
 
 -- Currently ICONs not used:
 -- Innkeeper
