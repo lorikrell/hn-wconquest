@@ -51,16 +51,6 @@ ns.cat.data = {
   [ "boats"        ] = { label = "boat$",         test = function(p) return p.ship and (p.ship == "BOAT" or p.ship == "SAILBOAT") end, },
   [ "vessels"      ] = { label = "water vessel$", test = function(p) return p.ship end,                                                },
 -- ==============================================================================================================================================
--- Tests: spoilers
--- p.spoiler or p.spoiler == "specific spoiler"
--- ==============================================================================================================================================
-  [ "spoilers"          ] = { label = "quest or achievement spoiler$", test = function(p) return p.spoiler and p.spoiler == "list"     end, },
-  [ "spoilers:maze"     ] = { label = "hedge maze spoiler$",           test = function(p) return p.spoiler and p.spoiler == "maze"     end, },    
-  [ "spoilers:doom"     ] = { label = "doomspeaker spoiler$",          test = function(p) return p.spoiler and p.spoiler == "doom"     end, },
-  [ "spoilers:depths"   ] = { label = "secret of the depths spoiler$", test = function(p) return p.spoiler and p.spoiler == "depths"   end, },
-  [ "spoilers:picture"  ] = { label = "Picturesque Boralus spoiler$",  test = function(p) return p.spoiler and p.spoiler == "picture"  end, },
-  -- [ "spoilers:mazeexit" ] = { label = "hedge maze exit spoiler$",      test = function(p) return p.spoiler and p.spoiler == "mazeexit" end, },    
--- ==============================================================================================================================================
 -- Tests: complex
 -- p.[field] [and|or] [not] p.[field] ...
 -- ==============================================================================================================================================

@@ -104,8 +104,7 @@ local function work_out_label(point)
        elseif point.event or point.battle or point.naval or point.tank or point.horror or point.magical or point.medical or point.report or point.stealth or point.meeting or point.deathfinal    then r, g, b = 1, 0.9, 0.6;
        elseif point.hbattle or point.hhorror or point.hmagical or point.hreport or point.hstealth or point.hmeeting    then r, g, b = 1, 0.1, 0;
        elseif point.abattle or point.ahorror or point.amagical or point.areport or point.astealth or point.ameeting    then r, g, b = 0.2, 0.7, 1;
-       elseif point.wclogo or point.campaign then r, g, b = 0.1, 0.6, 1; 
-       elseif point.spoiler                                   then r, g, b = 1, 0.5, 0;  label = "Spoilers: " .. label
+       elseif point.wclogo or point.campaign then r, g, b = 0.1, 0.6, 1;
        elseif point.empty and point.closed and not point.ship then r, g, b = 0.75, 0.75, 0.75; label = label .. " [empty, closed]"
        elseif point.empty                                     then r, g, b = 1, 1, 1;          label = label .. " [empty]"
        elseif point.closed and not point.ship                 then r, g, b = 1, 1, 1;          label = label .. " [closed]"
@@ -140,7 +139,6 @@ local function work_out_texture(point)
     local texture;
     -- ADD ICON - load icon and associate with a point and show entry
     if     point.atlas                                            then texture = atlas(point.atlas, point.scale);
-    elseif point.spoiler      and (ns.db.show_spoilers or custom)       then texture = t.spoilers
     elseif point.alliance     and (ns.db.show_alliance or custom)       then texture = t.alliance
     elseif point.statue       and (ns.db.show_misc  or custom)          then texture = t.statue
     elseif point.landmark     and (ns.db.show_misc  or custom)          then texture = t.landmark
@@ -614,7 +612,6 @@ local function should_show_point(coord, point, currentZone, isMinimap)
       if ns.db.show_campaign and point.campaign          then show = true; end;
       if ns.db.show_camp     and point.medic             then show = true; end;
       if ns.db.show_camp     and point.magic             then show = true; end;
-      if ns.db.show_spoilers and point.spoiler == "list" then show = true; end;
       if ns.db.show_misc     and not point.ship
                              and not point.alliance
                              and not point.engineering

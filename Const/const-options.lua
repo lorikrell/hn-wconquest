@@ -14,7 +14,6 @@ ns.defaults = {
 
         show_ships = true,
         show_misc = true,
-        show_spoilers = false,
         show_alliance = true,
         show_horde = true,
         show_neutral = true,
@@ -86,7 +85,6 @@ ns.options = {
         show_camp     = { type = "toggle", name = "Camps",                  order = 426, desc = "Show camp grounds and tents",                             },
         show_villain  = { type = "toggle", name = "Villains",               order = 427, desc = "Show enemy locations and villains",                       },
         show_supplies = { type = "toggle", name = "Supplies",               order = 428, desc = "Show supplies to collect or capture",                     },
-        show_spoilers = { type = "toggle", name = "Spoilers",               order = 470, desc = "Show hints for quests, achievements, and puzzles",        },
         show_misc     = { type = "toggle", name = "Miscellaneous",          order = 499, desc = "Show everything else",                                    },
       }, },
     -- ------------------------------------------------------------------------------------------------------------------------------------------------

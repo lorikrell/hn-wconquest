@@ -8,7 +8,6 @@ local     t = ns.textures;
 local atlas = ns.utils.textures.atlas;
 
 -- Image constants. To locate names for new images, see https://www.townlong-yak.com/framexml/live/Helix/AtlasInfo.lua or use the addon TextureAtlasViewer
-t.spoilers      = atlas("ShipMissionIcon-Legendary-Map",                  2.50);
 t.landmark      = atlas("Warfronts-FieldMapIcons-Neutral-Banner-Minimap", 1.50);
 t.ship.LARGE    = atlas("Ships_DreadnaughtA-Map",                         4.00);
 t.ship.MEDIUM   = atlas("Ships_Dreadnaught-Map",                          3.00);
